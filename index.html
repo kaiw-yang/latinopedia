@@ -278,6 +278,7 @@ const galeanoRefs={
 };
 function countryReferences(c){
  if(c.id==='ht')return haitiSourcesHTML();
+ if(c.id==='cl')return chileSourcesHTML();
  const guide=mofcomGuideURLs[c.id];
  const guideItem=guide?`<div class="ref-item"><span class="ref-tag">资料来源</span><strong>中华人民共和国商务部：《对外投资合作国别（地区）指南：${c.name}（2025年版）》</strong>。用于国家概况、宏观经济、经贸与营商环境等较新的事实性信息。 <a href="${guide}" target="_blank" rel="noopener">查看PDF ↗</a></div>`:`<div class="ref-item"><span class="ref-tag">资料入口</span><strong>商务部《对外投资合作国别（地区）指南》平台</strong>。后续扩展国家概况与当代经济数据时优先核对该国最新版指南。 <a href="https://fec.mofcom.gov.cn/channel/gbdqzn.shtml" target="_blank" rel="noopener">国别指南平台 ↗</a></div>`;
  const gal=galeanoRefs[c.id];
@@ -293,12 +294,13 @@ document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<bu
 showSection(state.section)}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
-if(id==='history'){const ev=events.filter(e=>e.country===c.name||(c.id!=='ht'&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year)).slice(0,c.id==='ht'?20:7);html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
+if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
 if(id==='politics')html=`${note('politics',u.politics)}<h2>政治与制度</h2><p>${escapeHTML(c.politics)}</p><h3>关注问题<span class="foreign-note">${c.id==='br'?'Questões centrais':'Problemas centrales'}</span></h3><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic">${escapeHTML(t)}</div>`).join('')}</div>`;
 if(id==='society')html=`${note('society',u.society)}<h2>社会与阶级</h2><p>${escapeHTML(c.society)}</p><h3>经济结构<span class="foreign-note">${c.id==='br'?'Estrutura econômica':'Estructura económica'}</span></h3><p>${escapeHTML(c.economy)}</p><p class="muted">研究提示：观察制度和政策如何影响不同阶级、族群、性别与地区的人们，不宜以单一概念概括整个社会。</p>`;
 if(id==='culture')html=`${note('culture',u.culture)}<h2>文化、语言与身份</h2><p><strong>语言 <span class="foreign-note" style="display:inline;font-size:10px">${c.id==='br'?'Idioma(s)':'Idioma(s)'}</span>：</strong>${escapeHTML(c.language)}</p><p>可从文学、音乐、宗教、饮食、口述历史及语言政治切入。不同族群和地区往往具有不同的文化经验；国家边界不等于文化边界。</p><div class="topic-list"><div class="topic"><strong>阅读视角<span class="foreign-note">${c.id==='br'?'Perspectiva de leitura':'Perspectiva de lectura'}</span></strong><p>殖民历史如何影响当代文化身份？谁的语言和记忆更容易进入国家叙事？</p></div></div>`;
 if(id==='research'){const relevant=books.filter(b=>c.books.includes(b.t));html=`${note('research',u.research)}<h2>研究问题与核心书目</h2><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><h3>相关阅读<span class="foreign-note">${c.id==='br'?'Leituras relacionadas':'Lecturas relacionadas'}</span></h3>${relevant.map(b=>`<div class="topic"><strong>${bookTitleHTML(b)}</strong>${bookStatusHTML(b)}<p>${escapeHTML(authorDisplay(b.a))} · ${b.y} — ${escapeHTML(b.d)}</p></div>`).join('')}${countryReferences(c)}<p class="muted">本页为研究入口，不替代专门史学或田野研究。建议结合一手资料与学术论文验证论点。</p>`}
 if(c.id==='ht')html+=haitiSectionHTML(id);
+if(c.id==='cl')html+=chileSectionHTML(id);
 if(id==='notes'){const value=state.notes[c.id]||'';html=`${note('notes',u.notes)}<h2>${c.name} · 研究笔记</h2><p>记录书目、历史线索、对照案例和待检验的解释。点击下方按钮保存到本设备，不上传到服务器。</p><textarea id="countryNote" class="note-area" placeholder="例如：记录一个待比较的历史机制、文献或研究问题……">${escapeHTML(value)}</textarea><p id="notesStatus" class="muted" style="font-size:12px">${value?'已保存至此设备':'尚无笔记'}</p><button class="button dark" onclick="saveNote()">保存笔记</button>`}
 if(id==='brasil'){html=c.id==='br'?brazilCourseHTML():'<h2>巴西深度课程</h2>';}if(id==='mexico'){html=c.id==='mx'?mexicoCourseHTML():'<h2>墨西哥深度课程</h2>';}if(id==='argentina'){html=c.id==='ar'?argentinaCourseHTML():'<h2>阿根廷深度课程</h2>';}document.getElementById('detailContent').innerHTML=html;if(id==='brasil'&&c.id==='br')initBrazilCourse();if(id==='mexico'&&c.id==='mx')initMexicoCourse();if(id==='argentina'&&c.id==='ar')initArgentinaCourse();}
 
@@ -450,6 +452,58 @@ function haitiSectionHTML(id){
  if(id==='society')return `<h3>把因果解释变成可以检验的问题</h3><p>“偿债挤压公共支出”是一项需要财政资料支持的解释；“土地与劳动制度影响农民自主”需要另选地方材料。两种机制可能并存，但不能互相替代。先指定一个时期、一类群体和一项可观察结果，再寻找相反证据。</p>`;
  if(id==='history')return haitiSourcesHTML();
  if(id==='research')return `<h3>三步阅读路线</h3><ol class="questions"><li>用James与Dubois重建革命过程，比较群众与领袖在两种叙述中的位置。</li><li>读Trouillot，追问史料形成和后来的历史书写怎样留下沉默。</li><li>选1825年赔款或1987年语言条款，把学术解释与具体文献对读，记录证据的适用范围。</li></ol>${haitiReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 版本与书目信息 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较练习：海地与巴西</h3><p>分别说明奴隶制终结与国家独立的时间关系；再选土地获取或劳动控制作比较。写出一个论点、两项证据和一个尚不能确定的问题，可保存到“我的研究笔记”。</p><button class="small-action" onclick="state.compare=['ht','br'];go('compare')">比较海地与巴西 →</button></div>`;
+ return '';
+}
+
+// Chile: historical interpretation, source criticism, and comparative exercises.
+const chileSources = [
+ {title:'智利国家图书馆：阿劳卡尼亚的军事占领与殖民',url:'https://www.memoriachilena.gob.cl/602/w3-article-3630.html',note:'历史导读与数字文献。将军方报告与马普切人的土地、口述记忆材料对读；史料中的“平定”反映特定权力立场。'},
+ {title:'国会图书馆：1971年铜矿国有化法令',url:'https://www.bcn.cl/leychile/navegar?idNorma=1060398',note:'第92号法令回顾第17.450号宪法改革及其国有化范围。法律文本可以证明制度安排，不能单独证明收入分配或工人处境。'},
+ {title:'国会图书馆：1988年公投',url:'https://www.bcn.cl/historiapolitica/elecciones/detalle_eleccion?handle=10221.1%2F63196&pe=',note:'历史选举资料。区分否决皮诺切特续任的公投、后续选举与1990年文人政府就任。'},
+ {title:'国家人权研究所：大规模侵犯人权调查报告',url:'https://bibliotecadigital.indh.cl/handle/123456789/168',note:'Rettig与Valech等报告入口。引用前核对调查授权、受害者认定范围、材料形成时间与版本；不同报告的数字不能直接相加。'},
+ {title:'国会图书馆：2019—2022年制宪进程',url:'https://www.bcn.cl/procesoconstituyente/cronograma',note:'用于梳理政治协议、程序改革与制宪机构的时间顺序，避免把抗议、启动程序和批准草案视作同一个决定。'},
+ {title:'国会图书馆：2022年宪法草案被否决',url:'https://www.bcn.cl/historiapolitica/elecciones/detalle_eleccion?handle=10221.1%2F86726&periodo=1990-2022',note:'2022年9月4日公投的历史记录；此处引用的是投票对象与结果，不以计票快报替代最终统计。'},
+ {title:'选举服务局：2023年公投计票通报',url:'https://www.servel.cl/Ch/app/boletin-final-sobre-resultados-parciales-de-la-eleccion-del-consejo-constitucional-2/noticias/',note:'官方初步计票通报显示“反对”领先。2023年投票对象是另一份草案；研究参与率或精确票数时应另核对最终核定数据。'}
+];
+const chileReadings = [
+ {t:'The Chile Reader',a:'Elizabeth Quay Hutchison, Thomas Miller Klubock, Nara B. Milanich & Peter Winn 编',y:'2013',topic:'历史',cn:'智利读本：历史、文化与政治',url:'https://www.dukeupress.edu/The-Chile-Reader',d:'跨越殖民时期至当代的文献选集，包含多种社会群体的文本与图像。先比较一份官方文书与一种个人叙述，辨认作者、受众和编辑选择。'},
+ {t:'Victims of the Chilean Miracle',a:'Peter Winn 编',y:'2004',topic:'政治经济',cn:'智利奇迹的受害者',url:'https://www.dukeupress.edu/victims-of-the-chilean-miracle',d:'以不同产业的劳工经验检验市场改革的分配后果。将就业稳定、工资、工会权利与宏观增长分开衡量，再问哪些群体获益、哪些承担成本。'},
+ {t:'Remembering Pinochet’s Chile',a:'Steve J. Stern',y:'2004',topic:'历史',cn:'记忆中的皮诺切特时代智利',url:'https://dukeupress.edu/remembering-pinochets-chile',d:'以口述历史研究独裁经验如何被记忆、争论和沉默。结合人权调查报告，区分记忆的社会意义、事件事实的核查与司法责任认定。'}
+];
+books.push(...chileReadings);
+for(const b of chileReadings)bookMeta[b.t]={cn:b.cn,status:'中文标题为本站导读译名；年份为原著初版，链接为出版社书目信息'};
+Object.assign(countries.find(c=>c.id==='cl'),{
+ history:'独立后的共和国建设与领土扩张、铜矿及劳工政治、1973年政变和军事独裁、1990年民主政府交接，是理解智利的关键线索。2019年后的制宪讨论又把社会权利与制度合法性带入公共争论；2022年和2023年两份不同的宪法草案均在公投中被否决。',
+ economy:'铜矿出口与国家资源收入、市场改革与劳工制度构成政治经济研究的主线。1971年大型铜矿国有化提醒我们：不能把整个经济概括为单一的公有或私有模式。',
+ politics:'单一制总统制共和国。研究民主转型时应区分选举竞争恢复、军方与宪制遗产、社会权利以及转型正义；1988年公投与1990年政府交接是不同节点。',
+ society:'阶级、劳工权利、教育与养老、性别和原住民领土关系，共同影响社会机会。国家平均指标不足以说明不同地区、产业和家庭承担的改革成本。',
+ language:'西班牙语；亦有马普切语等原住民语言',
+ topics:['铜矿、国家与劳工','军事独裁与人权记忆','1988—1990年民主转型','马普切领土与国家扩张','2019—2023年制宪进程'],
+ questions:['选举民主的恢复为什么不等于独裁时期制度影响立即消失？','如何同时考察经济增长、劳动权利与社会保障，而不把其中一个指标当作全部？','两次草案被否决，能够说明什么，又不能直接证明什么？'],
+ books:[...chileReadings.map(b=>b.t),'Open Veins of Latin America']
+});
+const chileEvents = [
+ {year:1862,area:'殖民与独立',name:'阿劳卡尼亚军事占领的扩张阶段',local:'Ocupación militar de la Araucanía',intro:'19世纪智利国家的领土扩张改变了马普切社会的土地与政治关系。',story:'国家图书馆将1862—1883年的军事行动放在更长的占领与殖民过程中考察。军队推进、据点建设与谈判并存；不同马普切群体也采取不同回应。史料中的“平定”不是中性描述，应追问谁失去土地、谁获得治理权。'},
+ {year:1971,area:'革命与改革',name:'大型铜矿国有化',local:'Nacionalización de la gran minería del cobre',intro:'阿连德政府时期，国会通过涉及大型铜矿的国有化宪法改革。',story:'铜矿国有化关系到资源主权、财政收入与产业劳动。研究时先核对法律所列企业和产权范围，再检验生产、收入与分配变化；不能从“国有化”一词直接推断所有矿业都采用同一种所有制。'},
+ {year:1988,area:'民主化与当代',name:'公投否决皮诺切特继续执政',local:'Plebiscito del 5 de octubre',intro:'1988年10月5日的公投中，“否”获胜，为后续政治交接创造条件。',story:'这一结果是民主转型的重要节点，但军事统治并未在投票当日结束。应继续追踪后续选举和1990年文人政府就任，同时区分执政者更替与军方影响、法律和经济制度的变化。'},
+ {year:2019,area:'民主化与当代',name:'社会抗议与制宪协议',local:'Estallido social y acuerdo constitucional',intro:'大规模社会抗议后，11月的政治协议为新的制宪程序提供路径。',story:'社会动员与制度谈判相互关联，但参与者的诉求并不一致。将抗议诉求、政治协议与后续投票分别研究，可以避免把所有参与者理解为支持同一份宪法方案的整体。'},
+ {year:2022,area:'民主化与当代',name:'第一份新宪法草案被否决',local:'Rechazo a la propuesta de 2022',intro:'9月4日公投否决制宪会议提出的草案。',story:'投票对象是一份具体文本，而不是所有可能的宪法改革。要解释结果，需要结合草案条款、竞选、投票参与和调查资料；不能仅凭总票数推断每位选民的动机。'},
+ {year:2023,area:'民主化与当代',name:'另一份宪法草案被否决',local:'Rechazo a la propuesta de 2023',intro:'12月17日，另一套制宪程序产生的草案也未获公投通过。',story:'2023年的文本与形成程序不同于2022年。比较两次结果时，应明确投票选项、文本内容、参与群体及政治环境的差异，避免把两次否决当作对同一方案的重复表态。'}
+];
+events.push(...chileEvents.map(e=>({...e,country:'智利'})));
+quiz.push(
+ {q:'1988年智利公投与1990年政治交接是什么关系？',opts:['1988年当天已完成全部制度转型','公投否决皮诺切特继续执政，1990年文人政府就任','两者都是同一次总统直选','1990年才举行1988年公投'],a:1,why:'公投结果与政府交接是不同节点。转型还涉及选举、军方影响和制度遗产，不能压缩为一个日期。详见智利历史页的国会图书馆资料。'},
+ {q:'2022年和2023年智利宪法公投结果，最直接支持哪项判断？',opts:['所有选民都反对任何改革','两次投票的是同一份草案','两份不同草案分别未获通过','所有反对票出于同一种动机'],a:2,why:'结果说明特定文本未获通过。要解释动机或判断选民是否支持其他改革，仍需草案比较、调查与其他证据。'},
+ {q:'研究智利市场改革对劳动者的影响，哪组证据更合适？',opts:['只看全国GDP增长','只看一种产业的成功故事','把公有或私有标签当作最终结论','同时比较实际工资、就业稳定、工会权利与产业差异'],a:3,why:'宏观增长与具体群体的生活变化是不同层次。Winn主编的劳工研究可帮助提出问题，实际判断还需核对时期、样本和指标定义。'}
+);
+thematicTopics.push({title:'独裁、民主转型与记忆政治',sub:'Dictadura / Ditadura · Transición / Transição · Memoria / Memória',countries:['智利','阿根廷','巴西'],text:'从政府交接进入军方影响、受害者认定、调查报告、司法追责与公共纪念。不同国家的转型节奏、制度约束和档案条件并不相同。',q:'民主政府成立后，哪些权力关系发生变化，哪些仍需通过社会行动与制度改革改变？',reads:'Steve J. Stern · 智利国家人权研究所报告 · 各国真相调查与司法资料'});
+function chileSourcesHTML(){return `<div class="ref-box"><h4>史料与核查入口</h4>${chileSources.map(s=>`<div class="ref-item"><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer"><strong>${escapeHTML(s.title)} ↗</strong></a><p>${escapeHTML(s.note)}</p></div>`).join('')}<p class="muted">核查日期：2026-10-13。本页制宪叙述截至2023年，属于历史导读。</p></div>`}
+function chileSectionHTML(id){
+ if(id==='history')return chileSourcesHTML();
+ if(id==='politics')return `<h3>从政府交接到制度变化</h3><p>1988年公投、1990年文人政府就任以及此后的制度改革，需要分别确定研究对象。可以检验三个维度：政治竞争如何恢复，哪些制度限制继续存在，哪些群体能通过法律和公共行动主张权利。</p><h3>两次否决，两个投票对象</h3><p>2022年与2023年被否决的是两份不同草案。比较时先阅读文本与形成程序，再观察竞选和投票资料。总票数不能直接替代对选民动机的研究。</p>${chileSourcesHTML()}`;
+ if(id==='society')return `<h3>经济增长与生活变化如何对读？</h3><p>选定一个时期与产业，分别考察实际工资、劳动时间、就业稳定和公共服务获取。即使全国收入增长，不同群体也可能承担不同成本；反过来，单一访谈也不足以代表整个社会。</p><div class="study-tile"><strong>小练习</strong><p>用Winn主编文集的一章提出一项可检验的解释，再列出需要补充的统计资料、比较对象和可能推翻该解释的证据。</p></div>`;
+ if(id==='culture')return `<h3>领土、语言与马普切经验</h3><p>国家疆界的扩展同时改变了原住民土地关系。阅读19世纪军方报告时，先辨认“边疆”或“平定”由谁定义，再与不同马普切群体的叙述对读，避免把他们视作意见完全一致的整体。</p><h3>记忆不是单一版本</h3><p>口述历史可以揭示人们如何理解独裁经验及其后果；事实核查则需要结合档案与调查。分析记忆差异，不意味着把已记录的人权侵害降格为无法判断的个人意见。</p><p>资料入口：国家图书馆阿劳卡尼亚专题、Stern的记忆研究及INDH调查报告，见“研究问题与书目”。</p>`;
+ if(id==='research')return `<h3>三步阅读路线</h3><ol class="questions"><li>从《The Chile Reader》挑选两种不同类型的材料，记录作者、时间、受众与编辑语境。</li><li>以劳工史或记忆研究为专题，提出一个有时间和群体边界的问题。</li><li>将论点与法律文本、调查报告或选举记录对读，注明证据能支持到哪一步。</li></ol>${chileReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 出版社书目与目录 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较练习：智利、阿根廷与巴西</h3><p>分别标出三国文人政府恢复的时间，再选择军方影响、真相调查或司法追责的一项制度展开比较。不要用“都经历过独裁”替代对机制和时序的解释。</p><button class="small-action" onclick="state.compare=['cl','ar','br'];go('compare')">进入三国比较 →</button></div>`;
  return '';
 }
 
