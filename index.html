@@ -280,6 +280,7 @@ function countryReferences(c){
  if(c.id==='ht')return haitiSourcesHTML();
  if(c.id==='cl')return chileSourcesHTML();
  if(c.id==='co')return colombiaSourcesHTML();
+ if(c.id==='pe')return peruSourcesHTML();
  const guide=mofcomGuideURLs[c.id];
  const guideItem=guide?`<div class="ref-item"><span class="ref-tag">资料来源</span><strong>中华人民共和国商务部：《对外投资合作国别（地区）指南：${c.name}（2025年版）》</strong>。用于国家概况、宏观经济、经贸与营商环境等较新的事实性信息。 <a href="${guide}" target="_blank" rel="noopener">查看PDF ↗</a></div>`:`<div class="ref-item"><span class="ref-tag">资料入口</span><strong>商务部《对外投资合作国别（地区）指南》平台</strong>。后续扩展国家概况与当代经济数据时优先核对该国最新版指南。 <a href="https://fec.mofcom.gov.cn/channel/gbdqzn.shtml" target="_blank" rel="noopener">国别指南平台 ↗</a></div>`;
  const gal=galeanoRefs[c.id];
@@ -295,7 +296,7 @@ document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<bu
 showSection(state.section)}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
-if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
+if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co','pe'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
 if(id==='politics')html=`${note('politics',u.politics)}<h2>政治与制度</h2><p>${escapeHTML(c.politics)}</p><h3>关注问题<span class="foreign-note">${c.id==='br'?'Questões centrais':'Problemas centrales'}</span></h3><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic">${escapeHTML(t)}</div>`).join('')}</div>`;
 if(id==='society')html=`${note('society',u.society)}<h2>社会与阶级</h2><p>${escapeHTML(c.society)}</p><h3>经济结构<span class="foreign-note">${c.id==='br'?'Estrutura econômica':'Estructura económica'}</span></h3><p>${escapeHTML(c.economy)}</p><p class="muted">研究提示：观察制度和政策如何影响不同阶级、族群、性别与地区的人们，不宜以单一概念概括整个社会。</p>`;
 if(id==='culture')html=`${note('culture',u.culture)}<h2>文化、语言与身份</h2><p><strong>语言 <span class="foreign-note" style="display:inline;font-size:10px">${c.id==='br'?'Idioma(s)':'Idioma(s)'}</span>：</strong>${escapeHTML(c.language)}</p><p>可从文学、音乐、宗教、饮食、口述历史及语言政治切入。不同族群和地区往往具有不同的文化经验；国家边界不等于文化边界。</p><div class="topic-list"><div class="topic"><strong>阅读视角<span class="foreign-note">${c.id==='br'?'Perspectiva de leitura':'Perspectiva de lectura'}</span></strong><p>殖民历史如何影响当代文化身份？谁的语言和记忆更容易进入国家叙事？</p></div></div>`;
@@ -303,6 +304,7 @@ if(id==='research'){const relevant=books.filter(b=>c.books.includes(b.t));html=`
 if(c.id==='ht')html+=haitiSectionHTML(id);
 if(c.id==='cl')html+=chileSectionHTML(id);
 if(c.id==='co')html+=colombiaSectionHTML(id);
+if(c.id==='pe')html+=peruSectionHTML(id);
 if(id==='notes'){const value=state.notes[c.id]||'';html=`${note('notes',u.notes)}<h2>${c.name} · 研究笔记</h2><p>记录书目、历史线索、对照案例和待检验的解释。点击下方按钮保存到本设备，不上传到服务器。</p><textarea id="countryNote" class="note-area" placeholder="例如：记录一个待比较的历史机制、文献或研究问题……">${escapeHTML(value)}</textarea><p id="notesStatus" class="muted" style="font-size:12px">${value?'已保存至此设备':'尚无笔记'}</p><button class="button dark" onclick="saveNote()">保存笔记</button>`}
 if(id==='brasil'){html=c.id==='br'?brazilCourseHTML():'<h2>巴西深度课程</h2>';}if(id==='mexico'){html=c.id==='mx'?mexicoCourseHTML():'<h2>墨西哥深度课程</h2>';}if(id==='argentina'){html=c.id==='ar'?argentinaCourseHTML():'<h2>阿根廷深度课程</h2>';}document.getElementById('detailContent').innerHTML=html;if(id==='brasil'&&c.id==='br')initBrazilCourse();if(id==='mexico'&&c.id==='mx')initMexicoCourse();if(id==='argentina'&&c.id==='ar')initArgentinaCourse();}
 
@@ -568,6 +570,56 @@ function colombiaSectionHTML(id){
  if(id==='society')return `<h3>土地不是一个单一指标</h3><p>土地集中关乎分配结构，返还回应被剥夺或被迫放弃土地的经历，农村改革还涉及服务、生计与基础设施。研究流离失所家庭时，应区分权利确认、返还执行、自愿返回的条件及持续的生活保障。</p><div class="study-tile"><strong>把问题缩小到一个地方</strong><p>选定一地和一段时间，列出四栏：政策承诺、执行证据、居民结果、尚缺资料。分别记录资料的分母、统计范围与截止日期，避免把登记人数、案件数与实际受益人数混用。</p></div>`;
  if(id==='culture')return `<h3>从文化与地方经验进入国家</h3><p>《The Colombia Reader》中的口述、艺术、报道和政府材料提供不同观察位置。比较一份地方叙述与一种全国叙事，观察哪些地区、族群、性别和日常活动进入或离开了画面。</p><p>1991年宪法的多元主义框架是语言与身份研究的制度入口。文化表达不只是冲突的背景，也可以是社区组织、记忆传承和权利主张的一部分；文学作品适合分析经验与表达，但不能单独替代事件核查。</p>`;
  if(id==='research')return `<h3>从地区案例到协议落实</h3><ol class="questions"><li>用《The Colombia Reader》定位地区与材料类型，再读Roldán的安蒂奥基亚案例，明确结论适用范围。</li><li>以Richani的政治经济解释提出假说，并寻找不能被该框架解释的地方经验。</li><li>选择和平协议的一项承诺，把条文、Kroc监测与社区层面的证据逐项对读。</li></ol>${colombiaReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 出版社书目与版本 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较：哥伦比亚与萨尔瓦多</h3><p>比较2016年与1992年和平协议时，先确认谈判主体、冲突范围与制度改革目标。再问：武装转入合法政治后，哪些条件影响参与者安全？先记录可比之处与不可比之处，再写因果解释。</p><button class="small-action" onclick="state.compare=['co','sv'];go('compare')">进入两国比较 →</button></div>`;
+ return '';
+}
+
+// Peru: land, regional experiences, language, and historical evidence.
+const peruSources=[
+ {title:'秘鲁文化部：1821年独立宣言文书',url:'https://www.gob.pe/institucion/cultura/noticias/506461-ministerio-de-cultura-declaran-patrimonio-cultural-de-la-nacion-el-acta-de-declaracion-de-la-independencia-del-peru',note:'文书保护与历史介绍；区分7月15日签署的文书、7月28日独立宣告与此后的战争过程。'},
+ {title:'国家档案馆：阿亚库乔与独立文献',url:'https://www.gob.pe/institucion/agn/noticias/1071924-guardianes-de-la-memoria-el-archivo-general-de-la-nacion-y-los-200-anos-de-la-independencia-del-peru',note:'1824年战役及独立文献入口。宣告独立、军事胜利与共和国制度建设属于不同阶段。'},
+ {title:'国会档案：1969年第17716号土地改革法令',url:'https://leyes.congreso.gob.pe/Documentos/Leyes/17716.pdf',note:'历史法律原文。第1条说明改革目标；目标与实际土地分配、生产和农民收入变化需要分别核查。'},
+ {title:'真相与和解委员会：最终报告结论',url:'https://www.cverdad.org.pe/ifinal/conclusiones.php',note:'针对1980—2000年内部武装冲突的调查结论。引用数字须区分收到的报告、证言分析和统计估计，并注明口径。'},
+ {title:'真相与和解委员会：报告提交的制度依据',url:'https://www.cverdad.org.pe/lacomision/cnormas/normas05.php',note:'2003年法令记载调查授权、证言处理及报告提交安排。授权范围也是理解资料覆盖边界的依据。'},
+ {title:'文化部BDPI：原住民语言资料',url:'https://bdpi.cultura.gob.pe/index.php/lenguas',note:'官方语言名录和进一步资料入口；查询时记录人口统计年份及分类标准，不把语言、族群自我认同与居住地当作同一个变量。'},
+ {title:'文化部BDPI：克丘亚各群体与语言变体',url:'https://bdpi.cultura.gob.pe/pueblos/quechuas',note:'展示不同地区与语言变体。共同语言名称不意味着各地具有相同历史、政治选择或社会结构。'}
+];
+const peruReadings=[
+ {t:'The Peru Reader',a:'Orin Starn, Carlos Iván Degregori & Robin Kirk 编',y:'2005',topic:'历史',cn:'秘鲁读本：历史、文化与政治',url:'https://www.dukeupress.edu/the-peru-reader',d:'本条采用2005年修订扩充第二版。将历史文献、文学和社会经验并置，适合先建立时空坐标，再比较不同类型材料的作者、受众与用途。'},
+ {t:'Nightwatch',a:'Orin Starn',y:'1999',topic:'民族志',cn:'守夜：安第斯的抗议政治',url:'https://dukeupress.edu/nightwatch',d:'研究秘鲁北部农民巡逻组织与基层政治。阅读时追问社区如何组织治安、处理纠纷并与国家互动，避免把这一地区的组织模式推广到全国。'},
+ {t:'Intimate Enemies',a:'Kimberly Theidon',y:'2012',topic:'民族志',cn:'亲密的敌人：秘鲁的暴力与和解',url:'https://www.pennpress.org/9780812223262/intimate-enemies/',d:'从经历战争的社区考察旧敌如何继续共同生活。区分宽恕、共处、司法与和解，关注性别及日常关系；初版2012年，链接可能展示后续版本。'}
+];
+books.push(...peruReadings);
+for(const b of peruReadings)bookMeta[b.t]={cn:b.cn,status:'中文标题为本站导读译名；所用版本见条目说明'};
+Object.assign(countries.find(c=>c.id==='pe'),{
+ history:'印加国家及更早的多元社会、西班牙殖民统治、1821年独立宣告与1824年阿亚库乔战役构成不同历史层次。1969年土地改革、1980—2000年内部武装冲突及其后的记忆与权利诉求，又重塑了国家和社区的关系。',
+ economy:'矿业、农业、服务业和城市非正规劳动并存。土地改革、资源开发与区域发展需区分产权、生产、生计和环境影响，不能用全国平均指标替代社区经验。',
+ politics:'总统制共和国。中央与地方关系、公民权与制度中断是长期议题；分析冲突时期的国家行为，应分别检验安全政策、权力约束与人权责任。',
+ society:'城乡、地区、阶级、性别与语言差异相互交织。社区组织、农民行动与迁移经验，是解释不平等及政治参与的重要入口。',
+ language:'西班牙语、克丘亚语、艾马拉语及多种亚马孙原住民语言',
+ topics:['独立与共和国形成','1969年土地改革','内部武装冲突与人权','农民组织与地方治理','语言、迁移与区域差异'],
+ questions:['改变土地所有制之后，还需要哪些条件才能改善农民生活？','同一场冲突为何在不同地区与语言群体中留下不同影响？','司法追责、赔偿与邻里共处之间有什么联系，又有什么区别？'],
+ books:[...peruReadings.map(b=>b.t),'Peasant and Nation']
+});
+const peruEvents=[
+ {year:1821,area:'殖民与独立',name:'秘鲁独立宣告',local:'Proclamación de la independencia',intro:'1821年7月的独立文书与公开宣告是建国过程的重要节点。',story:'7月15日签署的独立文书与7月28日的公开宣告不是同一个仪式。独立也没有使战争或制度建设立即结束，应把首都的政治行动放回更广的地区关系中。'},
+ {year:1824,area:'殖民与独立',name:'阿亚库乔战役',local:'Batalla de Ayacucho',intro:'12月9日的战役是结束西班牙在南美大陆主要军事统治的重要转折。',story:'战役胜利与独立宣告相隔数年，说明独立是过程而非单一日期。军事胜利之后，财政、地方权力与政治代表仍是共和国建设的问题。'},
+ {year:1969,area:'革命与改革',name:'土地改革法令',local:'Reforma agraria · Decreto Ley 17716',intro:'贝拉斯科军事政府颁布第17716号法令，推动土地关系重组。',story:'法令提出变革农业结构与提高农民生活水平的目标。研究成效时，应分别查土地分配、组织形式、信贷、市场与收入；既不能把法令目标写成既成事实，也不能只用单一产量指标评价改革。'},
+ {year:1980,area:'民主化与当代',name:'内部武装冲突开始',local:'Inicio del conflicto armado interno',intro:'在恢复选举民主的背景下，光辉道路发动武装斗争。',story:'真相与和解委员会调查了1980—2000年的暴力，并认定光辉道路发动武装斗争是冲突爆发的直接关键原因。调查同时涉及国家行为者和其他组织的侵害；不同主体的责任应依据具体行动与证据判断。'},
+ {year:2003,area:'民主化与当代',name:'真相与和解委员会提交最终报告',local:'Informe Final de la CVR',intro:'8月提交的报告汇集对1980—2000年冲突的调查、解释与建议。',story:'报告揭示暴力影响的社会与地区差异。阅读时分开记录登记材料、证言分析与估计结果，并将报告建议同后续赔偿、司法和社区生活研究对读。'}
+];
+events.push(...peruEvents.map(e=>({...e,country:'秘鲁'})));
+quiz.push(
+ {q:'理解秘鲁1969年土地改革，哪种方法最合适？',opts:['法令写入目标就表示目标已经实现','只有土地产权重要，其他因素无关','分别考察产权变化、组织形式、生产条件与农民生计','用一个全国指标代表所有地区'],a:2,why:'法令说明制度设计；成效要结合地区、时期与实施资料，土地获取、农业生产和生活保障是相互关联但不同的结果。'},
+ {q:'引用真相与和解委员会的受害者数据时，首先应核对什么？',opts:['报告封面颜色','统计对象、资料来源、覆盖时期及数字是否为估计','只保留最大的数字','把所有表格中的人数直接相加'],a:1,why:'证言材料、登记案例与总体估计的口径可能不同。应先说明分母和方法，避免重复计数或把样本特征当作无条件的总体结论。'},
+ {q:'民族志描述某个秘鲁社区的战后共处，最能直接帮助研究什么？',opts:['全国所有社区具有相同经历','共同居住说明人们已经互相宽恕','司法程序从来没有作用','特定场景中关系如何修复，以及共处与宽恕有何差别'],a:3,why:'民族志可以说明地方机制和经验，但推广需要比较证据。Theidon的研究提示，共处、宽恕与和解不应视作同一个结果。'}
+);
+function peruSourcesHTML(){return `<div class="ref-box"><h4>史料与核查入口</h4>${peruSources.map(s=>`<div class="ref-item"><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer"><strong>${escapeHTML(s.title)} ↗</strong></a><p>${escapeHTML(s.note)}</p></div>`).join('')}<p class="muted">核查日期：2026-10-13。本页为历史与研究导读，不提供实时政局概览。</p></div>`}
+function peruSectionHTML(id){
+ if(id==='history')return peruSourcesHTML();
+ if(id==='politics')return `<h3>地方治理与国家关系</h3><p>农民组织不是一个全国统一模式。Starn研究的北部巡逻组织提供了观察治安、纠纷处理与基层行动的窗口；它与其他地区的战争经历需要比较，不能直接等同。</p><h3>怎样读冲突报告？</h3><p>先看调查授权与时间范围，再区分对事件的记录、责任分析和改革建议。追究武装组织的犯罪与审查国家行为者的侵害可以同时进行，各自都需要具体证据。</p>${peruSourcesHTML()}`;
+ if(id==='society')return `<h3>土地改革之后还要问什么？</h3><p>选一个地区，分别记录谁取得土地、谁参与管理、如何获得信贷与市场，以及家庭如何安排劳动。法律、合作组织记录、统计和口述材料分别能回答不同问题。</p><h3>区域分类的用途与边界</h3><p>沿海、安第斯高地与亚马孙地区可作为学习导航，但各区域内部也有城乡、阶级与族群差异。把利马、高地乡村或某种语言直接等同于一种社会身份，会遮蔽迁移与多重归属。</p>`;
+ if(id==='culture')return `<h3>语言名称不等于同一种生活</h3><p>文化部资料展示克丘亚群体与语言变体的地域差异。研究教育、司法或行政服务时，应分清母语、自我认同和日常使用语言，再问特定制度如何影响不同使用者。</p><h3>和解如何进入日常生活？</h3><p>《Intimate Enemies》将研究推进到邻里和家庭关系。共同生活可能发生在宽恕之前，司法与赔偿也不自动完成关系修复。记录具体实践，比假设一个社区已经“和解”更有解释力。</p>`;
+ if(id==='research')return `<h3>从阅读到一个可回答的问题</h3><ol class="questions"><li>用《The Peru Reader》建立时间与地区坐标，选择一份法律或历史文书。</li><li>以《Nightwatch》或《Intimate Enemies》的一项地方经验，检查宏观解释遗漏了什么。</li><li>写出论点、证据范围与反例，再查CVR或BDPI资料补足不同层次的证据。</li></ol>${peruReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 出版社书目 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较：秘鲁与哥伦比亚</h3><p>对照秘鲁1969年土地改革与哥伦比亚2011年土地返还制度，先明确各自回应的历史问题、对象和工具，再选择一项共同的生活结果。不能将土地改革和针对剥夺经历的返还当成同一政策。</p><button class="small-action" onclick="state.compare=['pe','co'];go('compare')">进入两国比较 →</button></div>`;
  return '';
 }
 
