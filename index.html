@@ -279,6 +279,7 @@ const galeanoRefs={
 function countryReferences(c){
  if(c.id==='ht')return haitiSourcesHTML();
  if(c.id==='cl')return chileSourcesHTML();
+ if(c.id==='co')return colombiaSourcesHTML();
  const guide=mofcomGuideURLs[c.id];
  const guideItem=guide?`<div class="ref-item"><span class="ref-tag">资料来源</span><strong>中华人民共和国商务部：《对外投资合作国别（地区）指南：${c.name}（2025年版）》</strong>。用于国家概况、宏观经济、经贸与营商环境等较新的事实性信息。 <a href="${guide}" target="_blank" rel="noopener">查看PDF ↗</a></div>`:`<div class="ref-item"><span class="ref-tag">资料入口</span><strong>商务部《对外投资合作国别（地区）指南》平台</strong>。后续扩展国家概况与当代经济数据时优先核对该国最新版指南。 <a href="https://fec.mofcom.gov.cn/channel/gbdqzn.shtml" target="_blank" rel="noopener">国别指南平台 ↗</a></div>`;
  const gal=galeanoRefs[c.id];
@@ -294,13 +295,14 @@ document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<bu
 showSection(state.section)}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
-if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
+if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
 if(id==='politics')html=`${note('politics',u.politics)}<h2>政治与制度</h2><p>${escapeHTML(c.politics)}</p><h3>关注问题<span class="foreign-note">${c.id==='br'?'Questões centrais':'Problemas centrales'}</span></h3><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic">${escapeHTML(t)}</div>`).join('')}</div>`;
 if(id==='society')html=`${note('society',u.society)}<h2>社会与阶级</h2><p>${escapeHTML(c.society)}</p><h3>经济结构<span class="foreign-note">${c.id==='br'?'Estrutura econômica':'Estructura económica'}</span></h3><p>${escapeHTML(c.economy)}</p><p class="muted">研究提示：观察制度和政策如何影响不同阶级、族群、性别与地区的人们，不宜以单一概念概括整个社会。</p>`;
 if(id==='culture')html=`${note('culture',u.culture)}<h2>文化、语言与身份</h2><p><strong>语言 <span class="foreign-note" style="display:inline;font-size:10px">${c.id==='br'?'Idioma(s)':'Idioma(s)'}</span>：</strong>${escapeHTML(c.language)}</p><p>可从文学、音乐、宗教、饮食、口述历史及语言政治切入。不同族群和地区往往具有不同的文化经验；国家边界不等于文化边界。</p><div class="topic-list"><div class="topic"><strong>阅读视角<span class="foreign-note">${c.id==='br'?'Perspectiva de leitura':'Perspectiva de lectura'}</span></strong><p>殖民历史如何影响当代文化身份？谁的语言和记忆更容易进入国家叙事？</p></div></div>`;
 if(id==='research'){const relevant=books.filter(b=>c.books.includes(b.t));html=`${note('research',u.research)}<h2>研究问题与核心书目</h2><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><h3>相关阅读<span class="foreign-note">${c.id==='br'?'Leituras relacionadas':'Lecturas relacionadas'}</span></h3>${relevant.map(b=>`<div class="topic"><strong>${bookTitleHTML(b)}</strong>${bookStatusHTML(b)}<p>${escapeHTML(authorDisplay(b.a))} · ${b.y} — ${escapeHTML(b.d)}</p></div>`).join('')}${countryReferences(c)}<p class="muted">本页为研究入口，不替代专门史学或田野研究。建议结合一手资料与学术论文验证论点。</p>`}
 if(c.id==='ht')html+=haitiSectionHTML(id);
 if(c.id==='cl')html+=chileSectionHTML(id);
+if(c.id==='co')html+=colombiaSectionHTML(id);
 if(id==='notes'){const value=state.notes[c.id]||'';html=`${note('notes',u.notes)}<h2>${c.name} · 研究笔记</h2><p>记录书目、历史线索、对照案例和待检验的解释。点击下方按钮保存到本设备，不上传到服务器。</p><textarea id="countryNote" class="note-area" placeholder="例如：记录一个待比较的历史机制、文献或研究问题……">${escapeHTML(value)}</textarea><p id="notesStatus" class="muted" style="font-size:12px">${value?'已保存至此设备':'尚无笔记'}</p><button class="button dark" onclick="saveNote()">保存笔记</button>`}
 if(id==='brasil'){html=c.id==='br'?brazilCourseHTML():'<h2>巴西深度课程</h2>';}if(id==='mexico'){html=c.id==='mx'?mexicoCourseHTML():'<h2>墨西哥深度课程</h2>';}if(id==='argentina'){html=c.id==='ar'?argentinaCourseHTML():'<h2>阿根廷深度课程</h2>';}document.getElementById('detailContent').innerHTML=html;if(id==='brasil'&&c.id==='br')initBrazilCourse();if(id==='mexico'&&c.id==='mx')initMexicoCourse();if(id==='argentina'&&c.id==='ar')initArgentinaCourse();}
 
@@ -504,6 +506,68 @@ function chileSectionHTML(id){
  if(id==='society')return `<h3>经济增长与生活变化如何对读？</h3><p>选定一个时期与产业，分别考察实际工资、劳动时间、就业稳定和公共服务获取。即使全国收入增长，不同群体也可能承担不同成本；反过来，单一访谈也不足以代表整个社会。</p><div class="study-tile"><strong>小练习</strong><p>用Winn主编文集的一章提出一项可检验的解释，再列出需要补充的统计资料、比较对象和可能推翻该解释的证据。</p></div>`;
  if(id==='culture')return `<h3>领土、语言与马普切经验</h3><p>国家疆界的扩展同时改变了原住民土地关系。阅读19世纪军方报告时，先辨认“边疆”或“平定”由谁定义，再与不同马普切群体的叙述对读，避免把他们视作意见完全一致的整体。</p><h3>记忆不是单一版本</h3><p>口述历史可以揭示人们如何理解独裁经验及其后果；事实核查则需要结合档案与调查。分析记忆差异，不意味着把已记录的人权侵害降格为无法判断的个人意见。</p><p>资料入口：国家图书馆阿劳卡尼亚专题、Stern的记忆研究及INDH调查报告，见“研究问题与书目”。</p>`;
  if(id==='research')return `<h3>三步阅读路线</h3><ol class="questions"><li>从《The Chile Reader》挑选两种不同类型的材料，记录作者、时间、受众与编辑语境。</li><li>以劳工史或记忆研究为专题，提出一个有时间和群体边界的问题。</li><li>将论点与法律文本、调查报告或选举记录对读，注明证据能支持到哪一步。</li></ol>${chileReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 出版社书目与目录 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较练习：智利、阿根廷与巴西</h3><p>分别标出三国文人政府恢复的时间，再选择军方影响、真相调查或司法追责的一项制度展开比较。不要用“都经历过独裁”替代对机制和时序的解释。</p><button class="small-action" onclick="state.compare=['cl','ar','br'];go('compare')">进入三国比较 →</button></div>`;
+ return '';
+}
+
+// Colombia: regional history, the peace agreement, and evidence about implementation.
+const colombiaSources=[
+ {title:'共和国银行：《波哥大事件的不同叙述》',url:'https://babel.banrepcultural.org/digital/collection/p17054coll3/id/78/',note:'1948年4月9日盖坦遇刺及其后的叙述材料。辨认亲历回忆、文学重构与同时代记录，不能把首都经验代表全国。'},
+ {title:'共和国银行：1991年宪法导读',url:'https://enciclopedia.banrepcultural.org/Constituci%C3%B3n_Pol%C3%ADtica_de_Colombia_de_1991',note:'研究性概述，介绍多元主义、权利与族群文化承认。法律承认与实际获得保护需要不同证据。'},
+ {title:'第1448号法律：受害者与土地返还',url:'https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=43043',note:'政府法律数据库，含后续修订及判例注释。引用时注明所用版本；土地返还的制度设计不能替代执行数据。'},
+ {title:'2016年11月24日最终和平协议（英文译本）',url:'https://peaceaccords.nd.edu/wp-content/uploads/2023/02/Colombia-Final-Accord-Text-in-English.pdf',note:'哥伦比亚和平事务高级专员办公室编译、圣母大学收录。六部分分别涉及农村改革、政治参与、结束冲突、非法毒品、受害者和执行核查；英文译本供阅读，无独立法律效力。'},
+ {title:'联合国：2016年公投与修订协议的时序',url:'https://digitallibrary.un.org/record/1291384/files/1138094_EN.pdf',note:'《联合国基本事实》2017版的哥伦比亚任务介绍。核对9月签署、10月2日公投、11月24日修订协议与随后国会批准的区别。'},
+ {title:'真相委员会：最终报告与支撑资料',url:'https://www.comisiondelaverdad.co/hay-futuro-si-hay-verdad',note:'2022年报告的各卷、证言与支撑文件入口。区分报告的历史解释、证言与建议；不能把报告当作个人刑事判决。'},
+ {title:'真相委员会：与JEP的职能区别',url:'https://web.comisiondelaverdad.co/la-comision/preguntas-frecuentes',note:'机构说明：委员会属于非司法机制，不审判或判刑；JEP承担和平司法职能。两者属于相关联但不同的制度。'},
+ {title:'Kroc研究所：和平协议落实监测',url:'https://peaceaccords.nd.edu/barometer',note:'查找落实监测报告，核对报告截止日期、条款分类和评估方法。实施进度并不等于居民安全或生活改善的完整测量。'}
+];
+const colombiaReadings=[
+ {t:'The Colombia Reader',a:'Ann Farnsworth-Alvear, Marco Palacios & Ana María Gómez López 编',y:'2017',topic:'历史',cn:'哥伦比亚读本：历史、文化与政治',url:'https://www.dukeupress.edu/the-colombia-reader',d:'包含政府文书、口述历史、艺术与其他材料的选集。按地区、族群、城乡和性别比较经验，先问谁在叙述，再讨论其能代表多大范围。'},
+ {t:'Blood and Fire',a:'Mary Roldán',y:'2002',topic:'历史',cn:'血与火：安蒂奥基亚的暴力时期，1946—1953',url:'https://www.dukeupress.edu/blood-and-fire',d:'以安蒂奥基亚地区研究检验将La Violencia仅归于两党竞争的解释。阅读时追踪地方权力、文化边界和资源关系，不把一个地区的机制直接推广到全国。'},
+ {t:'Systems of Violence',a:'Nazih Richani',y:'2013',topic:'政治经济',cn:'暴力体系：哥伦比亚战争与和平的政治经济学',url:'https://sunypress.edu/Books/S/Systems-of-Violence2',d:'本条采用2013年第二版，初版2002年。把冲突各方、资源与组织关系放在同一解释框架中；其论述早于2016年协议，不能当作协议实施后的实证结论。'}
+];
+books.push(...colombiaReadings);
+for(const b of colombiaReadings)bookMeta[b.t]={cn:b.cn,status:'中文标题为本站导读译名；版本年份以本条说明及出版社记录为准'};
+Object.assign(countries.find(c=>c.id==='co'),{
+ history:'独立后的区域整合、两党竞争、20世纪中叶的La Violencia与后来的武装冲突相互关联，但并非同一个不变的过程。1991年宪法、2011年受害者与土地返还法、2016年政府与FARC-EP的和平协议，是研究权利与国家重建的重要节点。',
+ economy:'咖啡、石油、服务业与多种城乡生计并存。研究土地集中、非法市场与冲突时，应明确地区、时期和参与者，不能以毒品经济概括整个国家或解释全部暴力。',
+ politics:'总统制共和国。1991年宪法的权利框架与2016年和平协议提供不同的制度入口；地方治理、政治参与、受害者保障与执行能力需要分别检验。',
+ society:'国内流离失所、土地权利、城乡差异以及原住民和非裔社区的集体权利是关键议题。受害者组织、妇女组织与社区行动也是政治参与者，不能只被写作被动受害群体。',
+ language:'西班牙语及多种原住民语言、克里奥尔语',
+ topics:['地方社会与La Violencia','土地返还与农村改革','2016年和平协议及其落实','真相、司法与受害者权利','族群文化与社区组织'],
+ questions:['为何同一套全国制度在不同地区产生不同的安全与权利结果？','土地返还、农村改革与居民安全分别需要哪些指标？','签署和平协议、武装解除与社会关系改变为何不能画等号？'],
+ books:colombiaReadings.map(b=>b.t)
+});
+const colombiaEvents=[
+ {year:1948,area:'革命与改革',name:'盖坦遇刺与波哥大事件',local:'Asesinato de Gaitán y Bogotazo',intro:'4月9日自由党领袖盖坦遇刺，引发波哥大及其他地方的动荡。',story:'Bogotazo指向特定事件，La Violencia则涉及更长时期与不同地区的政治暴力。Roldán从1946年开始的地区研究提醒我们，不能把1948年的首都事件当作所有地方冲突的共同起点。'},
+ {year:1991,area:'民主化与当代',name:'新宪法与多元权利框架',local:'Constitución de 1991',intro:'新宪法强调参与、权利及族群文化多样性。',story:'制度承认提供主张权利的渠道，但不能单凭条文判断社区是否实际获得土地、服务与安全。可以追踪一种权利在地方行政、社会动员和司法实践中的具体落实。'},
+ {year:2011,area:'民主化与当代',name:'受害者与土地返还法',local:'Ley de Víctimas y Restitución de Tierras',intro:'第1448号法律为受害者救助、援助、综合赔偿和土地返还建立制度安排。',story:'针对被剥夺或被迫放弃土地的返还机制，与整个农村的土地分配改革不完全相同。确认权利、完成返还与能够安全生活也不是同一结果；使用法律数据库时还要核对后续修订。'},
+ {year:2022,area:'民主化与当代',name:'真相委员会公布最终报告',local:'Informe Final de la Comisión de la Verdad',intro:'委员会以报告、证言和建议呈现对武装冲突的调查与解释。',story:'报告属于非司法真相机制的成果，不是刑事判决。可以比较地区卷、族群经验与建议，追问材料怎样收集、哪些经历难以进入档案，以及“不再重演”需要什么制度条件。'}
+];
+events.push(...colombiaEvents.map(e=>({...e,country:'哥伦比亚'})));
+Object.assign(events.find(e=>e.country==='哥伦比亚'&&Number(e.year)===2016),{
+ intro:'政府与FARC-EP经过公投否决初始协议后的修订，于11月24日签署新的最终协议。',
+ story:'9月签署的协议在10月2日公投中被否决；修订后的协议于11月24日签署，随后获国会批准。协议涵盖农村改革、政治参与、结束冲突、非法毒品、受害者及执行核查。它针对政府与FARC-EP的冲突，不能表述为所有武装组织均已达成和平。检验落实时要区分制度设立、承诺执行与社区生活变化。'
+});
+quiz.push(
+ {q:'关于哥伦比亚2016年和平协议，哪项表述更准确？',opts:['所有武装组织共同签署了同一协议','签署意味着所有地方暴力立即结束','初始协议被公投否决后，政府与FARC-EP签署了修订协议','协议只涉及毒品问题'],a:2,why:'应区分10月公投与11月24日修订协议的签署。协议涉及六个主要领域，且不能代表所有武装组织与政府之间的关系。'},
+ {q:'真相委员会与和平特别司法管辖机构（JEP）最重要的区别是什么？',opts:['委员会调查历史经验但不审判或判刑，JEP承担司法职能','两者都是同一个法院','委员会负责判刑，JEP只保存档案','两者都不处理受害者相关问题'],a:0,why:'真相委员会是非司法机制，JEP是司法机制。历史解释、证言与刑事责任认定有不同程序和证据要求，不能互相替代。'},
+ {q:'评估土地返还是否改善居民生活，哪项研究设计最完整？',opts:['只统计公布了多少项政策','只看申请量，不看后续结果','只看全国经济增长率','分别追踪权利确认、返还执行、安全与生计，并注明地区和时期'],a:3,why:'法律安排、执行进度和生活结果属于不同层次；申请量或条款完成率本身不足以证明居民已经安全返回并维持生计。'}
+);
+function colombiaSourcesHTML(){return `<div class="ref-box"><h4>史料与核查入口</h4>${colombiaSources.map(s=>`<div class="ref-item"><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener noreferrer"><strong>${escapeHTML(s.title)} ↗</strong></a><p>${escapeHTML(s.note)}</p></div>`).join('')}<p class="muted">核查日期：2026-10-13。历史节点截至2022年；监测平台是后续研究入口，本页不提供实时执行率。</p></div>`}
+const colombiaAgreementGuide=[
+ ['农村综合改革','土地与农村发展安排','选一个地区，分开观察土地获取、基础设施与公共服务。'],
+ ['政治参与','进入合法政治与参与的条件','区分制度通道、实际参与及参与者安全。'],
+ ['结束冲突','停火、放下武器与重返社会','区分正式步骤完成与长期社会融入。'],
+ ['非法毒品问题','种植、生计、公共健康与非法市场','比较替代生计的持续性与地方安全条件。'],
+ ['受害者','真相、司法、赔偿与不再重演','区分报告、司法程序与受害者获得的实际支持。'],
+ ['执行与核查','落实机制及监测','记录报告日期、条款口径和证据，不把进度率等同于和平。']
+];
+function colombiaSectionHTML(id){
+ if(id==='history')return colombiaSourcesHTML();
+ if(id==='politics')return `<h3>和平协议的六个研究入口</h3><p>以下是阅读导航；具体承诺以协议原文为准。每一部分都可转化为独立的实证问题。</p><div class="topic-list">${colombiaAgreementGuide.map(([title,focus,q])=>`<div class="topic"><strong>${escapeHTML(title)}</strong><p>${escapeHTML(focus)}。${escapeHTML(q)}</p></div>`).join('')}</div><h3>真相机制与司法机制</h3><p>真相委员会解释冲突经验并提出建议，JEP承担司法职能。阅读时标注材料来自哪一机构、依据何种程序产生；同一事件的证言、历史解释与法律责任不是可互换的结论。</p>${colombiaSourcesHTML()}`;
+ if(id==='society')return `<h3>土地不是一个单一指标</h3><p>土地集中关乎分配结构，返还回应被剥夺或被迫放弃土地的经历，农村改革还涉及服务、生计与基础设施。研究流离失所家庭时，应区分权利确认、返还执行、自愿返回的条件及持续的生活保障。</p><div class="study-tile"><strong>把问题缩小到一个地方</strong><p>选定一地和一段时间，列出四栏：政策承诺、执行证据、居民结果、尚缺资料。分别记录资料的分母、统计范围与截止日期，避免把登记人数、案件数与实际受益人数混用。</p></div>`;
+ if(id==='culture')return `<h3>从文化与地方经验进入国家</h3><p>《The Colombia Reader》中的口述、艺术、报道和政府材料提供不同观察位置。比较一份地方叙述与一种全国叙事，观察哪些地区、族群、性别和日常活动进入或离开了画面。</p><p>1991年宪法的多元主义框架是语言与身份研究的制度入口。文化表达不只是冲突的背景，也可以是社区组织、记忆传承和权利主张的一部分；文学作品适合分析经验与表达，但不能单独替代事件核查。</p>`;
+ if(id==='research')return `<h3>从地区案例到协议落实</h3><ol class="questions"><li>用《The Colombia Reader》定位地区与材料类型，再读Roldán的安蒂奥基亚案例，明确结论适用范围。</li><li>以Richani的政治经济解释提出假说，并寻找不能被该框架解释的地方经验。</li><li>选择和平协议的一项承诺，把条文、Kroc监测与社区层面的证据逐项对读。</li></ol>${colombiaReadings.map(b=>`<p><a href="${escapeHTML(b.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.t)} · 出版社书目与版本 ↗</a></p>`).join('')}<div class="study-tile"><h3>比较：哥伦比亚与萨尔瓦多</h3><p>比较2016年与1992年和平协议时，先确认谈判主体、冲突范围与制度改革目标。再问：武装转入合法政治后，哪些条件影响参与者安全？先记录可比之处与不可比之处，再写因果解释。</p><button class="small-action" onclick="state.compare=['co','sv'];go('compare')">进入两国比较 →</button></div>`;
  return '';
 }
 
