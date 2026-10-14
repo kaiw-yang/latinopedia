@@ -277,6 +277,7 @@ const galeanoRefs={
  py:['“三国联盟反对巴拉圭的战争扼杀了独立发展惟一成功的经验”']
 };
 function countryReferences(c){
+ if(c.id==='cu')return cubaSourcesHTML();
  if(c.id==='ht')return haitiSourcesHTML();
  if(c.id==='cl')return chileSourcesHTML();
  if(c.id==='co')return colombiaSourcesHTML();
@@ -297,11 +298,12 @@ document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<bu
 showSection(state.section)}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
-if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co','pe','bo'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
+if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co','pe','bo','cu'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
 if(id==='politics')html=`${note('politics',u.politics)}<h2>政治与制度</h2><p>${escapeHTML(c.politics)}</p><h3>关注问题<span class="foreign-note">${c.id==='br'?'Questões centrais':'Problemas centrales'}</span></h3><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic">${escapeHTML(t)}</div>`).join('')}</div>`;
 if(id==='society')html=`${note('society',u.society)}<h2>社会与阶级</h2><p>${escapeHTML(c.society)}</p><h3>经济结构<span class="foreign-note">${c.id==='br'?'Estrutura econômica':'Estructura económica'}</span></h3><p>${escapeHTML(c.economy)}</p><p class="muted">研究提示：观察制度和政策如何影响不同阶级、族群、性别与地区的人们，不宜以单一概念概括整个社会。</p>`;
 if(id==='culture')html=`${note('culture',u.culture)}<h2>文化、语言与身份</h2><p><strong>语言 <span class="foreign-note" style="display:inline;font-size:10px">${c.id==='br'?'Idioma(s)':'Idioma(s)'}</span>：</strong>${escapeHTML(c.language)}</p><p>可从文学、音乐、宗教、饮食、口述历史及语言政治切入。不同族群和地区往往具有不同的文化经验；国家边界不等于文化边界。</p><div class="topic-list"><div class="topic"><strong>阅读视角<span class="foreign-note">${c.id==='br'?'Perspectiva de leitura':'Perspectiva de lectura'}</span></strong><p>殖民历史如何影响当代文化身份？谁的语言和记忆更容易进入国家叙事？</p></div></div>`;
 if(id==='research'){const relevant=books.filter(b=>c.books.includes(b.t));html=`${note('research',u.research)}<h2>研究问题与核心书目</h2><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><h3>相关阅读<span class="foreign-note">${c.id==='br'?'Leituras relacionadas':'Lecturas relacionadas'}</span></h3>${relevant.map(b=>`<div class="topic"><strong>${bookTitleHTML(b)}</strong>${bookStatusHTML(b)}<p>${escapeHTML(authorDisplay(b.a))} · ${b.y} — ${escapeHTML(b.d)}</p></div>`).join('')}${countryReferences(c)}<p class="muted">本页为研究入口，不替代专门史学或田野研究。建议结合一手资料与学术论文验证论点。</p>`}
+if(c.id==='cu')html+=cubaSectionHTML(id);
 if(c.id==='ht')html+=haitiSectionHTML(id);
 if(c.id==='cl')html+=chileSectionHTML(id);
 if(c.id==='co')html+=colombiaSectionHTML(id);
@@ -685,6 +687,49 @@ glossary.push(
  {term:'justicia transicional',lang:'ES',text:'转型正义。处理严重侵害遗产的一组制度与实践，可包括真相、司法、赔偿和制度改革。不同机制的授权、证据标准和结果不能互相替代。'}
 );
 function compareTopic(index){const topic=thematicTopics[index];if(!topic)return;const ids=topic.countries.map(name=>countries.find(c=>c.name===name)?.id).filter(Boolean);state.compare=[...new Set(ids)].slice(0,3);go('compare')}
+
+
+/* Cuba: sovereignty, historical sources, and guided reading. */
+const cubaSources=[
+{title:'美国国会图书馆：Teller与Platt修正案',url:'https://guides.loc.gov/world-of-1898/teller-platt-amendments',note:'历史导读。用于区分1898年战争、1901年修正案与1902年共和国成立；同时注意美国机构叙述主权问题的立场。'},
+{title:'美国国务院历史办公室：1962年导弹危机',url:'https://history.state.gov/milestones/1961-1968/cuban-missile-crisis',note:'已停止更新的历史专题。用于重建危机的外交过程；美国与苏联的谈判记录不能代表全部古巴社会经验。'},
+{title:'杜克大学出版社：The Cuba Reader（第二版）',url:'https://www.dukeupress.edu/the-cuba-reader-second-edition',note:'2019年版书目及目录入口。选读不同体裁与立场的材料，记录作者、年代、受众和编辑背景。'}
+];
+const cubaBook={t:'The Cuba Reader',a:'Aviva Chomsky, Barry Carr, Alfredo Prieto & Pamela Maria Smorkaloff 编',y:'2019',topic:'历史',d:'第二版汇集历史、文化与政治材料。建议各选一份政治文本和一份生活叙述，比较两者能回答什么问题，以及各自遗漏了什么。',url:cubaSources[2].url};
+if(!books.some(b=>b.t===cubaBook.t))books.push(cubaBook);
+bookMeta[cubaBook.t]={cn:'古巴读本',status:'中文标题为本站导读译名；2019年为第二版年份'};
+const cuba=countries.find(c=>c.id==='cu');
+Object.assign(cuba,{
+independence:'1898年西班牙统治结束；1902年共和国成立',
+history:'古巴的国家形成需要区分反殖民斗争、西班牙统治结束与共和国成立。1898年战争之后，美国占领持续至1902年；1901年普拉特修正案所规定的干预权等条件，又限制了共和国初期的自主空间。1959年革命是另一场政治与社会转型，不应作为古巴历史唯一的起点。',
+politics:'研究古巴政治，可把国家主权、制度组织与居民参与分开考察。1902年的共和国成立与1959年的革命对应不同问题；1962年导弹危机则把古巴置于冷战核对抗之中。判断权力如何运作，需要具体时期的制度材料，也需要居民与组织的经验。',
+society:'从家庭、工作与公共服务进入古巴社会：谁能获得哪些资源，取得资源需要什么条件，不同代际与居住地的经验是否相同？研究设计应同时记录制度承诺与实际生活，避免用一个全国指标代替所有人的处境。',
+economy:'可把糖业与出口关系、革命后的经济组织，以及苏联解体前后的生活变化作为分期阅读线索。解释某一时期的困难时，要分别检验外部关系、国内政策与家庭资源，不能预先把所有结果归因于同一种机制。',
+topics:['1898—1902年主权与建国','革命、制度与日常生活','冷战中的古巴主体性','文化叙述与迁移记忆'],
+questions:['西班牙统治结束、共和国成立与实际自主为什么不能用同一个日期概括？','如何将1962年的大国外交材料与古巴自身的安全诉求对读？','政治演说、文学与生活叙述分别能提供哪些证据，又有哪些局限？'],
+books:[...new Set([...cuba.books,cubaBook.t])]
+});
+const cubaEvents=[
+{year:1898,area:'殖民与独立',country:'古巴',name:'西班牙统治结束与占领阶段',local:'Fin del dominio español',intro:'战争结束西班牙在古巴的统治，但没有立即带来不受外部约束的共和国。',story:'把殖民统治结束与军事占领分开观察，并将古巴独立诉求纳入叙述。一个帝国退出，不等于所有外部控制同步消失。来源见古巴研究页的国会图书馆导读。'},
+{year:1901,area:'殖民与独立',country:'古巴',name:'普拉特修正案',local:'Enmienda Platt',intro:'修正案以干预权等条件约束古巴未来的主权安排。',story:'研究时区分条文规定、外交安排与实际干预。规范文本说明某项权力如何被主张，却不能独自解释社会中的全部权力关系。来源见古巴研究页的国会图书馆导读。'},
+{year:1902,area:'殖民与独立',country:'古巴',name:'古巴共和国成立',local:'República de Cuba',intro:'共和国成立，美国的这一阶段占领结束。',story:'将1902年与1898年并列，可以看出战争结束与共和国成立的时间差。进一步追问外部限制如何影响国家自主，而不是把独立理解为所有权利一次到位。来源见古巴研究页。'},
+{year:1962,area:'革命与改革',country:'古巴',name:'古巴导弹危机',local:'Crisis de los misiles',intro:'1962年10月，苏联在古巴部署核导弹引发美苏危机。',story:'美苏谈判促成苏联撤除导弹的安排，但只读两国首脑的通信，容易忽略古巴自己的安全关切。比较谁参加谈判、谁承担风险，以及哪些声音没有进入这组档案。来源见美国国务院历史办公室专题。'}
+];
+for(const event of cubaEvents){const existing=events.find(e=>e.country===event.country&&Number(e.year)===event.year);if(existing)Object.assign(existing,event);else events.push(event);}
+function cubaSourcesHTML(){return '<div class="ref-box"><h4>史料与核查入口</h4>'+cubaSources.map(s=>'<div class="ref-item"><a href="'+escapeHTML(s.url)+'" target="_blank" rel="noopener noreferrer"><strong>'+escapeHTML(s.title)+' ↗</strong></a><p>'+escapeHTML(s.note)+'</p></div>').join('')+'<p class="muted">核查日期：2026-10-14。书目版本、历史事实与研究问题分别标明；本页为历史导读。</p></div>';}
+function cubaSectionHTML(id){
+if(id==='history')return cubaSourcesHTML();
+if(id==='politics')return '<h3>谁有权决定安全？</h3><p>以1962年为例，分别列出古巴、美国与苏联的行动和诉求。再问：外交材料是谁制作的，为谁服务？能否从一方的档案推断另一方的全部意图？把尚缺的古巴材料明确记下。</p>';
+if(id==='society')return '<h3>从一个家庭问题建立研究尺度</h3><p>选择住房、照护或工作中的一个问题，限定地区与十年以内的时间段。先读制度材料，再用访谈、日记或民族志检验人们如何实际取得资源；注明样本范围，不将单个经历直接推广到全国。</p>';
+if(id==='culture')return '<h3>把文化作品作为有作者的材料</h3><p>从《The Cuba Reader》选一篇文学作品或一段文化叙述，记录创作年代、叙述者与受众。作品中的“我们”包括谁？岛内、迁移与海外生活经验是否被赋予相同位置？</p><p>文化既能表达归属，也能保存争议。不要把某一种音乐、宗教或政治立场当作所有古巴人的共同特征；先说明这份材料代表谁，再讨论它与国家叙事的关系。</p>';
+if(id==='research')return '<h3>三步阅读路线</h3><ol class="questions"><li>读1898—1902年的导读，列出战争结束、修正案和共和国成立三个节点。</li><li>读1962年危机的外交叙述，标注叙述主体，并列出需要补充的古巴材料。</li><li>从《The Cuba Reader》选两种体裁的材料，写出一个论点、两项证据和一个不能据此判断的问题。</li></ol><div class="study-tile"><h3>比较：古巴与海地的主权</h3><p>对照古巴1898—1902年的建国过程与海地1804年独立、1825年承认条件。分别观察军事、外交和财政约束；不要把不同机制简单等同。</p><button class="small-action" onclick="state.compare=[\'cu\',\'ht\'];go(\'compare\')">进入两国比较 →</button></div>';
+return '';
+}
+quiz.push(
+{q:'古巴1898年与1902年的区别是什么？',opts:['两个年份都指1959年革命','1898年西班牙统治结束，1902年共和国成立','1902年西班牙才首次抵达古巴','两个年份均表示外部影响彻底消失'],a:1,why:'殖民统治结束、军事占领结束与共和国成立需要分别辨认。参见古巴研究页的国会图书馆资料。'},
+{q:'只用美苏首脑通信研究1962年危机，最需要补充什么？',opts:['假定古巴没有自身诉求','将外交通信当作全体居民的意见','忽略材料形成背景','古巴自身的材料及不同群体的经验'],a:3,why:'外交记录适合重建部分决策，但不能代表所有参与者与居民。研究者需说明档案视角及缺失声音。'},
+{q:'文学作品进入历史研究时，哪种读法更合适？',opts:['核对作者、年代、受众与叙事位置，并与其他材料对读','把每个情节当作全国统计','认为文学没有任何历史价值','不区分作者与叙述者'],a:0,why:'文学可以呈现经验与想象；它的证据用途取决于研究问题，不能直接替代统计或制度记录。'}
+);
 
 function init(){renderNav();document.getElementById('homeCountries').innerHTML=['br','mx','ar','cl','cu'].map(id=>countryCard(countries.find(c=>c.id===id))).join('');document.querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{state.region=b.dataset.region;renderCountries()}));document.getElementById('countrySearch').addEventListener('input',renderCountries);document.querySelectorAll('[data-era]').forEach(b=>b.addEventListener('click',()=>{state.era=b.dataset.era;renderTimeline()}));document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{state.topic=b.dataset.topic;renderBooks()}));renderCountries();renderTopics();renderDetail();renderTimeline();renderCompare();renderBooks();renderQuiz();let hash=location.hash.replace('#','');if(hash.startsWith('country-')&&countries.some(c=>c.id===hash.slice(8)))openCountry(hash.slice(8));else if(document.getElementById(hash)&&hash!=='detail')go(hash)}init();
 </script></body></html>
