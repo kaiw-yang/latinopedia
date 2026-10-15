@@ -81,6 +81,10 @@ h2 .foreign-note,h3 .foreign-note{font-family:Inter,"Noto Sans SC",system-ui,san
 .ar-progress>div{height:100%;background:#4789a7;transition:width .2s}
 @media(max-width:700px){.data-snapshot{grid-template-columns:1fr 1fr}.ar-banner{padding:22px}.ar-banner:after{font-size:48px}}
 </style>
+
+<style id="br-society-styles">
+.br-society-reading{max-width:820px;line-height:1.85}.br-society-reading h2{margin:2.1rem 0 .8rem}.br-society-reading h3{margin:1.7rem 0 .65rem}.br-society-reading p{margin:.65rem 0 1rem}.br-viz{border:1px solid #d3ddd2;background:#f5f7f1;border-radius:12px;padding:20px;margin:24px 0}.br-viz h4{margin:0 0 14px;font-size:1.05rem}.br-viz-row{margin:16px 0}.br-viz-row strong,.br-viz-row small{display:block}.br-viz-row small{font-size:.78rem;color:#52645b;margin:6px 0 3px}.br-track{height:13px;background:#dce4d9;border-radius:8px;overflow:hidden}.br-track span{display:block;height:100%;background:#37735b;min-width:2px;border-radius:8px}.br-viz-source{font-size:.78rem;line-height:1.5;color:#596a5f}.br-periods{display:grid;gap:9px}.br-period{display:grid;grid-template-columns:110px 1fr;column-gap:16px;border-left:3px solid #55856b;padding:9px 12px;background:#fff}.br-period b{font-size:.8rem;color:#41634f;grid-row:span 2}.br-period strong{font-size:.95rem}.br-period span{font-size:.82rem;color:#5c6c61}.br-bibliography{font-size:.88rem;line-height:1.7;padding-left:1.5rem}.br-bibliography li{margin-bottom:10px}.br-bibliography a{color:#276c52;text-decoration:underline}@media(max-width:600px){.br-viz{padding:14px}.br-period{grid-template-columns:1fr;gap:3px}.br-period b{grid-row:auto}.br-society-reading{overflow-wrap:anywhere}}
+</style>
 </head><body>
 <header class="topbar"><div class="shell inner"><a class="brand" href="#home" onclick="go('home');return false"><span class="brand-symbol">L</span><b>Latinopedia<span style="color:#80ae8a">.</span></b></a><nav class="nav" id="desktopNav"></nav><div class="header-right"><span class="lang">中文 / ES / PT</span><span class="nav-cta">探索 · 阅读 · 思考</span></div></div></header>
 <main>
@@ -297,11 +301,66 @@ document.getElementById('countryMeta').innerHTML=[['首都',u.capital,c.capital]
 const cn={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'我的研究笔记',brasil:'巴西 · 深度课程',mexico:'墨西哥 · 深度课程',argentina:'阿根廷 · 深度课程'};
 document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<button class="${state.section===id?'active':''}" onclick="showSection('${id}')">${cn[id]}<span class="foreign-note">${u[id]||''}</span></button>`).join('');
 showSection(state.section)}
+
+function brazilSocietyHTML(){return \`
+<div class="br-society-reading">
+<h2>社会与阶级<span class="foreign-note">Sociedade e classes sociais</span></h2>
+<p>巴西社会的不平等具有深刻的历史根源。殖民时期形成的大土地所有制、种植园经济与奴隶劳动制度，既影响财富和生产资料的分配，也塑造种族、阶级与政治权力之间的关系。1888年废奴、1889年建立共和国、20世纪工业化以及民主化，改变了这些关系的制度形式，却没有自动消除历史积累的差异。</p>
+<p>理解当代巴西，需要将土地、劳动市场、种族关系、区域发展和社会公民权放在同一个分析框架之中，而不是把不平等归结为单一原因。</p>
+<h3>土地所有制与阶级结构<span class="foreign-note">Estrutura fundiária e classes sociais</span></h3>
+<p>葡萄牙殖民统治下的土地授予制度（<i>sesmarias</i>）和大规模种植园生产，使土地、劳动控制与地方权力紧密结合。1850年《土地法》（<i>Lei de Terras</i>）进一步强化了通过购买获取公共土地的制度，缺少资本的人群更难获得独立经营的土地。</p>
+<p>历史学家卡约·普拉多·茹尼奥尔（Caio Prado Júnior）在《当代巴西的形成》（<i>Formação do Brasil Contemporâneo</i>, 1942）中指出，殖民经济的组织具有鲜明的对外市场取向。这一视角提示我们关注：出口贸易创造的财富如何在不同土地所有者和劳动群体之间分配。</p>
+<div class="br-viz" role="group" aria-label="巴西2017年农业普查土地与经营单位结构">
+<h4>农业经营单位与土地面积的分布</h4>
+<div class="br-viz-row"><div><strong>1,000公顷及以上的经营单位</strong><small>单位数量：约1%</small><div class="br-track"><span style="width:1%"></span></div><small>经营土地面积：47.6%</small><div class="br-track"><span style="width:47.6%"></span></div></div></div>
+<div class="br-viz-row"><div><strong>家庭农业</strong><small>单位数量：约77%</small><div class="br-track"><span style="width:77%"></span></div><small>经营土地面积：约23%</small><div class="br-track"><span style="width:23%"></span></div></div></div>
+<p class="br-viz-source">来源：IBGE《2017年农业普查》（2019年公布）。两组数据采用不同分类口径（规模与经营性质），不可相加；面积比例均指农业经营单位占用面积。</p>
+</div>
+<p>这种结构并不意味着大型农业必然低效，也不意味着所有家庭农业都贫困。它表明，土地集中与家庭农业在就业中的重要性可以同时存在。土地改革（<i>reforma agrária</i>）、农村劳动权和原住民领土保护因此持续成为公共争论。</p>
+<h3>种族与社会分层<span class="foreign-note">Raça e estratificação social</span></h3>
+<p>巴西的奴隶制历史横跨数个世纪，被强迫迁徙的非洲人及其后代广泛参与甘蔗、采矿、咖啡和城市劳动。1888年《黄金法》（<i>Lei Áurea</i>）废除了奴隶制，却没有同时提供普遍的土地、教育和就业保障。</p>
+<p>弗洛雷斯坦·费尔南德斯（Florestan Fernandes）在《黑人融入阶级社会》（<i>A Integração do Negro na Sociedade de Classes</i>, 1964）中研究了废奴后黑人群体进入资本主义社会的制度障碍。他的研究挑战了“种族民主”（<i>democracia racial</i>）能够充分解释巴西种族关系的观点：文化混合与社会平等是两件不同的事。</p>
+<p>种族和阶级不应彼此替代。教育机会、职业分布、家庭财富、住房条件和公共安全中的差异，可能使种族不平等在市场与制度中持续再生产。</p>
+<h3>区域差异与城市社会<span class="foreign-note">Desigualdades regionais e sociedade urbana</span></h3>
+<p>东北部（<i>Nordeste</i>）长期与殖民糖业、土地集中及迁移史联系紧密；东南部（<i>Sudeste</i>）则因咖啡经济、工业化和都市扩张成为主要经济中心。圣保罗（São Paulo）与里约热内卢（Rio de Janeiro）的就业机会吸引大量人口，也伴随着住房压力与空间分层。</p>
+<p>特蕾莎·卡尔代拉（Teresa P. R. Caldeira）在《围墙之城》（<i>City of Walls</i>, 2000）中分析圣保罗的犯罪恐惧、封闭式居住与城市隔离，说明阶级界限不仅体现在收入，也体现在城市空间和公共生活中。</p>
+<h3>社会公民权<span class="foreign-note">Cidadania social</span></h3>
+<p>1930年代以来，瓦加斯（Getúlio Vargas）时期的劳动政策以及1943年《劳动法汇编》（<i>CLT</i>）扩展了正规劳动保护，但早期覆盖具有明显职业选择性。1988年宪法则扩大公民、政治和社会权利，为统一医疗体系（<i>SUS</i>）等制度奠定基础。</p>
+<p>社会权利写入法律，不意味着所有居民都能同等享有公共服务。国家财政能力、地方治理、非正规劳动以及城乡差异，都会影响权利的实际实现。</p>
+<h2>经济结构<span class="foreign-note">Estrutura econômica</span></h2>
+<p>巴西是拉丁美洲规模最大的经济体之一，其发展并非简单地从“农业社会”转向“工业社会”：殖民出口产业、国家推动的工业化与现代服务业彼此叠加，构成今天复杂而不均衡的经济结构。</p>
+<div class="br-viz br-periods" role="group" aria-label="巴西经济结构历史演变示意">
+<h4>经济结构的历史演变</h4>
+<div class="br-period"><b>16—18世纪</b><strong>甘蔗、矿业与大西洋贸易</strong><span>种植园、奴隶劳动、黄金开采</span></div>
+<div class="br-period"><b>19世纪</b><strong>咖啡出口与国内市场扩张</strong><span>区域交通、劳动力变迁、东南部增长</span></div>
+<div class="br-period"><b>1930年代以后</b><strong>国家主导的工业化</strong><span>进口替代、钢铁、能源、汽车工业</span></div>
+<div class="br-period"><b>当代</b><strong>服务业、工业与商品出口并存</strong><span>金融与公共服务、制造业、农产品和矿产</span></div>
+<p class="br-viz-source">概念性历史示意，非各产业产值的定量比例图。参考：Prado Júnior（1942）、Furtado（1959）。</p>
+</div>
+<h3>出口经济与殖民遗产<span class="foreign-note">Economia colonial e exportação</span></h3>
+<p>16世纪以后，东北部甘蔗生产连接葡萄牙殖民地与大西洋贸易网络；18世纪黄金开采推动内陆人口和市场增长；19世纪咖啡出口带动东南部交通与资本积累。富尔塔多（Celso Furtado）在《巴西经济的形成》（<i>Formação Econômica do Brasil</i>, 1959）中强调，不同出口周期形成的劳动制度、收入分配和区域联系，对后来的发展道路影响深远。</p>
+<h3>工业化与发展主义<span class="foreign-note">Industrialização e desenvolvimentismo</span></h3>
+<p>20世纪30年代后，巴西通过国家投资、基础设施建设、产业保护等政策推动工业化。进口替代工业化（<i>industrialização por substituição de importações</i>）促进了钢铁、汽车和其他制造业的发展，也扩展了城市劳动市场。然而，工业投资与正规就业长期集中于部分地区，工业化并未自动消除贫困与地区差距。</p>
+<h3>当代经济与结构性挑战<span class="foreign-note">Economia contemporânea</span></h3>
+<p>根据巴西地理统计局（IBGE）的国民经济核算，2024年巴西名义GDP约为11.7万亿雷亚尔，实际增长3.4%。服务业是经济主体，同时制造业、现代农业和矿业在国内生产与出口中具有重要地位。大豆、铁矿石、咖啡等商品使巴西深度参与全球市场，也让部分行业面临商品价格周期的影响。</p>
+<p>经济发展的核心问题，不仅是增加出口或提高GDP，还包括生产率、技术创新、劳动条件及公共服务是否获得普遍改善。</p>
+<h3>参考文献<span class="foreign-note">Referências</span></h3>
+<ol class="br-bibliography">
+<li>Prado Júnior, Caio. <i>Formação do Brasil Contemporâneo: Colônia</i>. 1942.</li>
+<li>Furtado, Celso. <i>Formação Econômica do Brasil</i>. 1959. <a href="https://www.companhiadasletras.com.br/" target="_blank" rel="noopener">Companhia das Letras ↗</a></li>
+<li>Fernandes, Florestan. <i>A Integração do Negro na Sociedade de Classes</i>. 1964.</li>
+<li>Caldeira, Teresa P. R. <i>City of Walls: Crime, Segregation, and Citizenship in São Paulo</i>. University of California Press, 2000.</li>
+<li>IBGE. <i>Censo Agropecuário 2017</i>. 2019. <a href="https://censoagro2017.ibge.gov.br/" target="_blank" rel="noopener">农业普查 ↗</a></li>
+<li>IBGE. <i>Desigualdades Sociais por Cor ou Raça no Brasil</i>. 2022. <a href="https://www.ibge.gov.br/" target="_blank" rel="noopener">IBGE ↗</a></li>
+<li>IBGE. <i>PIB cresce 3,4% em 2024 e fecha o ano em R$ 11,7 trilhões</i>. 2025. <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/42774-pib-cresce-3-4-em-2024-e-fecha-o-ano-em-r-11-7-trilhoes" target="_blank" rel="noopener">官方数据 ↗</a></li>
+</ol>
+</div>\`}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
 if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co','pe','bo','cu'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
 if(id==='politics')html=`${note('politics',u.politics)}<h2>政治与制度</h2><p>${escapeHTML(c.politics)}</p><h3>关注问题<span class="foreign-note">${c.id==='br'?'Questões centrais':'Problemas centrales'}</span></h3><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic">${escapeHTML(t)}</div>`).join('')}</div>`;
 if(id==='society')html=`${note('society',u.society)}<h2>社会与阶级</h2><p>${escapeHTML(c.society)}</p><h3>经济结构<span class="foreign-note">${c.id==='br'?'Estrutura econômica':'Estructura económica'}</span></h3><p>${escapeHTML(c.economy)}</p><p class="muted">研究提示：观察制度和政策如何影响不同阶级、族群、性别与地区的人们，不宜以单一概念概括整个社会。</p>`;
+if(c.id==='br'&&id==='society')html=brazilSocietyHTML();
 if(id==='culture')html=`${note('culture',u.culture)}<h2>文化、语言与身份</h2><p><strong>语言 <span class="foreign-note" style="display:inline;font-size:10px">${c.id==='br'?'Idioma(s)':'Idioma(s)'}</span>：</strong>${escapeHTML(c.language)}</p><p>可从文学、音乐、宗教、饮食、口述历史及语言政治切入。不同族群和地区往往具有不同的文化经验；国家边界不等于文化边界。</p><div class="topic-list"><div class="topic"><strong>阅读视角<span class="foreign-note">${c.id==='br'?'Perspectiva de leitura':'Perspectiva de lectura'}</span></strong><p>殖民历史如何影响当代文化身份？谁的语言和记忆更容易进入国家叙事？</p></div></div>`;
 if(id==='research'){const relevant=books.filter(b=>c.books.includes(b.t));html=`${note('research',u.research)}<h2>研究问题与核心书目</h2><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><h3>相关阅读<span class="foreign-note">${c.id==='br'?'Leituras relacionadas':'Lecturas relacionadas'}</span></h3>${relevant.map(b=>`<div class="topic"><strong>${bookTitleHTML(b)}</strong>${bookStatusHTML(b)}<p>${escapeHTML(authorDisplay(b.a))} · ${b.y} — ${escapeHTML(b.d)}</p></div>`).join('')}${countryReferences(c)}<p class="muted">本页为研究入口，不替代专门史学或田野研究。建议结合一手资料与学术论文验证论点。</p>`}
 if(c.id==='br'&&id==='politics')html=brazilPoliticsHTML();
