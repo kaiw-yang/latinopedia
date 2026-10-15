@@ -302,7 +302,7 @@ const cn={overview:'总览',history:'历史与国家形成',politics:'政治与�
 document.getElementById('detailMenu').innerHTML=detailSectionIds(c).map(id=>`<button class="${state.section===id?'active':''}" onclick="showSection('${id}')">${cn[id]}<span class="foreign-note">${u[id]||''}</span></button>`).join('');
 showSection(state.section)}
 
-function brazilSocietyHTML(){return \`
+function brazilSocietyHTML(){return `
 <div class="br-society-reading">
 <h2>社会与阶级<span class="foreign-note">Sociedade e classes sociais</span></h2>
 <p>巴西社会的不平等具有深刻的历史根源。殖民时期形成的大土地所有制、种植园经济与奴隶劳动制度，既影响财富和生产资料的分配，也塑造种族、阶级与政治权力之间的关系。1888年废奴、1889年建立共和国、20世纪工业化以及民主化，改变了这些关系的制度形式，却没有自动消除历史积累的差异。</p>
@@ -354,7 +354,7 @@ function brazilSocietyHTML(){return \`
 <li>IBGE. <i>Desigualdades Sociais por Cor ou Raça no Brasil</i>. 2022. <a href="https://www.ibge.gov.br/" target="_blank" rel="noopener">IBGE ↗</a></li>
 <li>IBGE. <i>PIB cresce 3,4% em 2024 e fecha o ano em R$ 11,7 trilhões</i>. 2025. <a href="https://agenciadenoticias.ibge.gov.br/agencia-sala-de-imprensa/2013-agencia-de-noticias/releases/42774-pib-cresce-3-4-em-2024-e-fecha-o-ano-em-r-11-7-trilhoes" target="_blank" rel="noopener">官方数据 ↗</a></li>
 </ol>
-</div>\`}
+</div>`}
 function showSection(id){state.section=id;const c=countries.find(x=>x.id===state.country),u=localUI(c);const ids=detailSectionIds(c);document.querySelectorAll('#detailMenu button').forEach((b,i)=>b.classList.toggle('active',ids[i]===id));let html='';const sectionZh={overview:'总览',history:'历史与国家形成',politics:'政治与制度',society:'社会与阶级',culture:'文化与身份',research:'研究问题与书目',notes:'研究笔记',mexico:'墨西哥深度课程'};const note=(id,foreign)=>`<div class="kicker">${sectionZh[id]||''}<span class="foreign-note">${foreign}</span></div>`;
 if(id==='overview'){html=`${note('overview',u.overview)}<h2>理解${c.name}</h2><p>${escapeHTML(c.history)}</p><div class="topic-list">${c.topics.slice(0,3).map(t=>`<div class="topic"><strong>${escapeHTML(t)}</strong></div>`).join('')}</div><h3>从这些问题开始<span class="foreign-note">${c.id==='br'?'Perguntas para começar':'Preguntas para empezar'}</span></h3><ol class="questions">${c.questions.map(q=>`<li>${escapeHTML(q)}</li>`).join('')}</ol><div class="related-paths"><button class="related-path" onclick="go('topics')"><strong>进入跨国专题</strong><span>把${c.name}放进区域比较</span></button><button class="related-path" onclick="state.compare=[...new Set([state.country,...state.compare])].slice(0,3);go('compare')"><strong>加入国家比较</strong><span>比较历史路径与制度结构</span></button><button class="related-path" onclick="go('library')"><strong>继续阅读</strong><span>从书目进入学术争论</span></button></div>`}
 if(id==='history'){const ev=events.filter(e=>e.country===c.name||(!['ht','cl','co','pe','bo','cu'].includes(c.id)&&e.country==='跨地区')).sort((a,b)=>Number(a.year)-Number(b.year));html=`${note('history',u.history)}<h2>历史与国家形成</h2><p>${escapeHTML(c.history)}</p><div class="topic-list"><div class="topic"><strong>独立与建国<span class="foreign-note">${c.id==='br'?'Independência e construção do Estado':'Independencia y construcción estatal'}</span></strong><p>关键年份：${escapeHTML(c.independence)} · 殖民背景：${escapeHTML(c.colonizer)}</p></div></div>${ev.length?`<div class="mini-country-timeline">${timelineMarkup(ev,'country')}</div>`:''}`}
