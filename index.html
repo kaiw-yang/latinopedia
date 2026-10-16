@@ -114,6 +114,14 @@ h2 .foreign-note,h3 .foreign-note{font-family:Inter,"Noto Sans SC",system-ui,san
 
 
 .country-essay-supplement{margin-top:28px;border-top:1px solid var(--line);padding-top:18px}.country-essay-supplement>summary{cursor:pointer;font-weight:700;color:var(--green)}
+a.cite-back{font-weight:800;color:#176e52;text-decoration:none;white-space:nowrap;scroll-margin:96px}
+a.cite-back:hover{text-decoration:underline}
+a.cite-back.ref-tag{color:#2e6753;text-decoration:none}
+a.cite-back.ref-tag:hover{text-decoration:underline}
+.country-essay .ref-item a.cite-back{white-space:nowrap}
+a.cite-ref,.ref-item{scroll-margin-top:96px}
+.cite-flash{animation:cite-flash 1.4s ease}
+@keyframes cite-flash{0%{background:#e4f0b0}35%{background:#e4f0b0}100%{background:transparent}}
 </style>
 
 <style id="br-society-styles">
@@ -361,7 +369,9 @@ if(c.id==='bo')html+=boliviaSectionHTML(id)+boEcStudyHTML('bo',id);
 if(c.id==='ec')html+=boEcStudyHTML('ec',id);
 if(id==='society'&&countrySocietyEssays[c.id])html=countrySocietyEssays[c.id]+'<details class="country-essay-supplement"><summary>继续探索：已有图解与阅读路径</summary>'+html+'</details>';
 if(id==='notes'){const value=state.notes[c.id]||'';html=`${note('notes',u.notes)}<h2>${c.name} · 研究笔记</h2><p>记录书目、历史线索、对照案例和待检验的解释。点击下方按钮保存到本设备，不上传到服务器。</p><textarea id="countryNote" class="note-area" placeholder="例如：记录一个待比较的历史机制、文献或研究问题……">${escapeHTML(value)}</textarea><p id="notesStatus" class="muted" style="font-size:12px">${value?'已保存至此设备':'尚无笔记'}</p><button class="button dark" onclick="saveNote()">保存笔记</button>`}
-if(id==='brasil'){html=c.id==='br'?brazilCourseHTML():'<h2>巴西深度课程</h2>';}if(id==='mexico'){html=c.id==='mx'?mexicoCourseHTML():'<h2>墨西哥深度课程</h2>';}if(id==='argentina'){html=c.id==='ar'?argentinaCourseHTML():'<h2>阿根廷深度课程</h2>';}document.getElementById('detailContent').innerHTML=html;if(id==='brasil'&&c.id==='br')initBrazilCourse();if(id==='mexico'&&c.id==='mx')initMexicoCourse();if(id==='argentina'&&c.id==='ar')initArgentinaCourse();}
+if(id==='brasil'){html=c.id==='br'?brazilCourseHTML():'<h2>巴西深度课程</h2>';}if(id==='mexico'){html=c.id==='mx'?mexicoCourseHTML():'<h2>墨西哥深度课程</h2>';}if(id==='argentina'){html=c.id==='ar'?argentinaCourseHTML():'<h2>阿根廷深度课程</h2>';}document.getElementById('detailContent').innerHTML=html;if(id==='brasil'&&c.id==='br')initBrazilCourse();if(id==='mexico'&&c.id==='mx')initMexicoCourse();if(id==='argentina'&&c.id==='ar')initArgentinaCourse();wireCitations(document.getElementById('detailContent'));}
+function scrollToCite(id){const el=document.getElementById(id);if(!el)return;const mark=el.closest('p, .ref-item, li')||el;mark.scrollIntoView({behavior:'smooth',block:'center'});mark.classList.remove('cite-flash');void mark.offsetWidth;mark.classList.add('cite-flash');}
+function wireCitations(scope){if(!scope)return;const boxes=[...scope.querySelectorAll('.ref-box')];boxes.forEach((box,bi)=>{box.querySelectorAll('a').forEach(a=>{if(a.dataset.citeSplit||a.classList.contains('cite-back'))return;const m=a.textContent.trim().match(/^\[(\d+)\]\s+(\S[\s\S]*)$/);if(!m)return;const back=document.createElement('a');back.className='cite-back';back.dataset.cite=m[1];back.textContent='['+m[1]+']';const title=a.cloneNode(false);title.textContent=m[2];title.dataset.citeSplit='1';a.replaceWith(back,document.createTextNode(' '),title);});box.querySelectorAll('.ref-tag').forEach(span=>{const m=span.textContent.trim().match(/^\[(\d+)\]$/);if(!m)return;const back=document.createElement('a');back.className='cite-back ref-tag';back.dataset.cite=m[1];back.textContent='['+m[1]+']';span.replaceWith(back);});const targetByNum=new Map();box.querySelectorAll('a.cite-back').forEach(a=>{const n=a.dataset.cite;if(targetByNum.has(n))return;const item=a.closest('.ref-item')||a;item.id='cite-ref-'+bi+'-'+n;targetByNum.set(n,item);});const firstCite=new Map();scope.querySelectorAll('a').forEach(a=>{if(a.closest('.ref-box')||a.dataset.citeWired)return;const m=a.textContent.trim().match(/^\[(\d+)\]$/);if(!m)return;const next=boxes.find(b=>a.compareDocumentPosition(b)&Node.DOCUMENT_POSITION_FOLLOWING);if(next!==box)return;const n=m[1];const target=targetByNum.get(n);if(!target)return;if(!firstCite.has(n)){a.id='cite-text-'+bi+'-'+n;firstCite.set(n,a);}a.classList.add('cite-ref');a.dataset.citeWired='1';a.removeAttribute('target');a.removeAttribute('rel');a.href='#'+target.id;a.setAttribute('aria-label','跳转到参考文献 '+n);a.addEventListener('click',e=>{e.preventDefault();scrollToCite(target.id);});});box.querySelectorAll('a.cite-back').forEach(a=>{const n=a.dataset.cite;const text=firstCite.get(n);if(!text){const span=document.createElement('span');span.className=a.classList.contains('ref-tag')?'ref-tag':'cite-num';span.textContent=a.textContent;a.replaceWith(span);return;}a.href='#'+text.id;a.setAttribute('aria-label','返回正文引用 '+n);a.addEventListener('click',e=>{e.preventDefault();scrollToCite(text.id);});});});}
 
 
 
