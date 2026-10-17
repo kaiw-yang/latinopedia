@@ -31,9 +31,12 @@
       let rows = [...box.querySelectorAll('.ref-item, li')].filter(r => !r.parentElement.closest('.ref-item, li'));
       if (!rows.length) rows = [...box.children].filter(r => r.tagName === 'A');
       const entries = rows.map((row, i) => {
-        const n = i + 1, id = 'cite-ref-' + bi + '-' + n, oldId = row.id;
+        const oldId = row.id;
         const tag = row.querySelector('.ref-tag, .cite-back');
         const old = marker(tag?.textContent || row.textContent);
+        // Preserve explicit source numbers: R18 becomes 18, never its list position.
+        const n = old && /^R?\d+$/.test(old) ? Number(old.replace(/^R/, '')) : i + 1;
+        const id = 'cite-ref-' + bi + '-' + n;
         const urls = [...row.querySelectorAll('a[href]')].map(a => a.href).filter(h => /^https?:/.test(h));
         if (row.tagName === 'A' && /^https?:/.test(row.href)) urls.push(row.href);
         // Keep titles and external links; remove only old bibliography labels.
