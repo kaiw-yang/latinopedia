@@ -1,0 +1,8 @@
+a.cite-ref,a.cite-back,.cite-num{font-weight:800;color:#176e52;text-decoration:none;white-space:nowrap;scroll-margin-top:96px}
+a.cite-ref:hover,a.cite-back:hover{text-decoration:underline}
+a.cite-ref:focus-visible,a.cite-back:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.numbered-references ol,.numbered-references:is(ol){list-style:none;padding-left:0}
+[id^="cite-ref-"],[id^="cite-text-"]{scroll-margin-top:96px}
+.cite-flash{animation:cite-flash 1.4s ease}
+@keyframes cite-flash{0%,35%{background:#e4f0b0}100%{background:transparent}}
+@media(prefers-reduced-motion:reduce){.cite-flash{animation:none}}
