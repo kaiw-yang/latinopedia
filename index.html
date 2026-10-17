@@ -1077,4 +1077,5 @@ const countrySocietyEssays = {
 
 function init(){initLibrarySearch();renderNav();document.getElementById('homeCountries').innerHTML=['br','mx','ar','cl','cu'].map(id=>countryCard(countries.find(c=>c.id===id))).join('');document.querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{state.region=b.dataset.region;renderCountries()}));document.getElementById('countrySearch').addEventListener('input',renderCountries);document.querySelectorAll('[data-era]').forEach(b=>b.addEventListener('click',()=>{state.era=b.dataset.era;renderTimeline()}));document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{state.topic=b.dataset.topic;renderBooks()}));renderCountries();renderTopics();renderDetail();renderTimeline();renderCompare();renderBooks();renderQuiz();let hash=location.hash.replace('#','');if(hash.startsWith('country-')&&countries.some(c=>c.id===hash.slice(8)))openCountry(hash.slice(8));else if(document.getElementById(hash)&&hash!=='detail')go(hash)}init();
 </script>
+<script src="countries/integration.js"></script>
 </body></html>
