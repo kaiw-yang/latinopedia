@@ -1,8 +1,8 @@
-# 哥斯达黎加 · Costa Rica
+# 哥斯达黎加（Costa Rica） · Costa Rica
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-哥斯达黎加被广泛视为民主稳定、无常备军和生态旅游的代表。但这种国家形象有其具体历史条件，也可能遮蔽咖啡土地关系、尼加拉瓜移民劳动、原住民领地与环境开发争端。
+哥斯达黎加（Costa Rica）被广泛视为民主稳定、无常备军和生态旅游的代表。但这种国家形象有其具体历史条件，也可能遮蔽咖啡土地关系、尼加拉瓜（Nicaragua）移民劳动、原住民领地与环境开发争端。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Costa Rica**
@@ -64,7 +64,7 @@
 
 取消常备军为财政与公共制度提供不同的政治条件，但民主稳定不能只归因于“没有军队”。选举法院、政党竞争、社会政策和国际环境同样参与了制度形成。
 
-1948年冲突后的制度重建与1949年取消常备军，是哥斯达黎加政治发展的重要节点，但不意味着社会冲突从此消失。选举机构、司法系统与社会保障制度需要财政和政治联盟持续维持。所谓“例外主义”可作为比较研究的待检验假设：它能否解释农民组织、劳工冲突、跨境移民与公共服务差异？
+1948年冲突后的制度重建与1949年取消常备军，是哥斯达黎加（Costa Rica）政治发展的重要节点，但不意味着社会冲突从此消失。选举机构、司法系统与社会保障制度需要财政和政治联盟持续维持。所谓“例外主义”可作为比较研究的待检验假设：它能否解释农民组织、劳工冲突、跨境移民与公共服务差异？
 
 ## 四、经济结构 / Estructura económica
 
@@ -74,15 +74,15 @@
 
 ## 五、社会与阶级 / Sociedad y clases
 
-社会保障和教育覆盖较强，但尼加拉瓜移民、原住民与偏远地区居民仍可能面对服务与身份障碍。生态保护与土地权之间亦可能出现张力。
+社会保障和教育覆盖较强，但尼加拉瓜（Nicaragua）移民、原住民与偏远地区居民仍可能面对服务与身份障碍。生态保护与土地权之间亦可能出现张力。
 
-全民医保及社会保障制度为比较拉美福利国家提供重要案例，但实际就医等待、边远地区设施及移民资格仍可能造成服务差异。尼加拉瓜移民参与农业、家政和建筑等行业，国家身份与社会保障之间存在实质联系。用“中产稳定”描述社会时，也应询问哪些居民处于非正规劳动和跨境法律不确定性之中。
+全民医保及社会保障制度为比较拉美福利国家提供重要案例，但实际就医等待、边远地区设施及移民资格仍可能造成服务差异。尼加拉瓜（Nicaragua）移民参与农业、家政和建筑等行业，国家身份与社会保障之间存在实质联系。用“中产稳定”描述社会时，也应询问哪些居民处于非正规劳动和跨境法律不确定性之中。
 
 ## 六、文化、语言与身份 / Cultura, lenguas e identidades
 
 “pura vida”作为国家文化符号有旅游与公共传播的历史；加勒比沿岸非裔传统、Bribri等原住民社群、移民文化让其民族身份更加多样。
 
-生态旅游和“pura vida”被广泛用于国家品牌建设，但宣传语无法穷尽加勒比海岸非裔文化、原住民语言及农村生活。文化保存和商业旅游可能创造收益，也可能改变地方对土地和传统的解释权。研究身份应比较教育中的民主国家叙事与少数群体自述，避免将哥斯达黎加的相对制度稳定解释为文化同质。
+生态旅游和“pura vida”被广泛用于国家品牌建设，但宣传语无法穷尽加勒比海岸非裔文化、原住民语言及农村生活。文化保存和商业旅游可能创造收益，也可能改变地方对土地和传统的解释权。研究身份应比较教育中的民主国家叙事与少数群体自述，避免将哥斯达黎加（Costa Rica）的相对制度稳定解释为文化同质。
 
 ## 七、分析框架：四个层次
 
@@ -94,7 +94,7 @@
 
 > Se proscribe el Ejército como institución permanente
 
-— 哥斯达黎加1949年宪法，第12条（2020年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Costa_Rica_2020?lang=es)。
+— 哥斯达黎加（Costa Rica）1949年宪法，第12条（2020年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Costa_Rica_2020?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -105,9 +105,9 @@
 
 1. Steven Palmer、Iván Molina 编，The Costa Rica Reader，Duke University Press，2004 — https://www.dukeupress.edu/the-costa-rica-reader
 2. Fabrice Lehoucq、Iván Molina，Stuffing the Ballot Box: Fraud, Electoral Reform, and Democratization in Costa Rica，Cambridge University Press，2002（书目条目；暂不提供未经核实的直达链接）
-3. 哥斯达黎加统计局 INEC — https://inec.cr/
-4. 哥斯达黎加法律原文节录出处：哥斯达黎加1949年宪法，第12条（2020年修订文本） — https://www.constituteproject.org/constitution/Costa_Rica_2020?lang=es
+3. 哥斯达黎加（Costa Rica）统计局 INEC — https://inec.cr/
+4. 哥斯达黎加（Costa Rica）法律原文节录出处：哥斯达黎加（Costa Rica）1949年宪法，第12条（2020年修订文本） — https://www.constituteproject.org/constitution/Costa_Rica_2020?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

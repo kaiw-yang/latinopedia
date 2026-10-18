@@ -1,8 +1,8 @@
-# 危地马拉 · Guatemala
+# 危地马拉（Guatemala） · Guatemala
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-危地马拉的历史核心并非孤立的内战，而是玛雅社会、殖民劳役、咖啡土地集中、冷战干预和战后转型正义之间的长期关联。玛雅人并非只是受害群体，也是重要政治与文化行动者。
+危地马拉（Guatemala）的历史核心并非孤立的内战，而是玛雅社会、殖民劳役、咖啡土地集中、冷战干预和战后转型正义之间的长期关联。玛雅人并非只是受害群体，也是重要政治与文化行动者。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Guatemala**
@@ -10,12 +10,12 @@
 ### 01. 殖民以前 · 玛雅政治与文化多样性
 *Mundos mayas*
 
-今天危地马拉地区拥有多种玛雅语言和政治传统；古典玛雅城邦与当代社区之间既有历史连续，也不能被简单视为同一制度。
+今天危地马拉（Guatemala）地区拥有多种玛雅语言和政治传统；古典玛雅城邦与当代社区之间既有历史连续，也不能被简单视为同一制度。
 
 ### 02. 1524—1821 · 征服与高地社区
 *Conquista y comunidad*
 
-西班牙征服依赖战争、原住民联盟与殖民税役；社区领袖、教会与地方政府持续协商土地及身份界限。
+西班牙（España）征服依赖战争、原住民联盟与殖民税役；社区领袖、教会与地方政府持续协商土地及身份界限。
 
 ### 03. 1821—1870年代 · 独立与保守共和国
 *República*
@@ -30,7 +30,7 @@
 ### 05. 1944—1954 · “十年春天”与改革
 *Diez años de primavera*
 
-革命政府推进教育、劳工和土地改革，1954年在美国支持下发生政变；冷战政治与国内阶级利益共同作用。
+革命政府推进教育、劳工和土地改革，1954年在美国（United States）支持下发生政变；冷战政治与国内阶级利益共同作用。
 
 ### 06. 1960—1996 · 内部武装冲突与国家暴力
 *Conflicto armado*
@@ -64,7 +64,7 @@
 
 正式宪制承认多元族群并建立选举秩序，但地方寡头、土地所有权及司法资源分布影响实际政治代表。分析转型正义应同时研究国家机构、幸存者组织与基层证词。
 
-1954年政变中断了革命十年的土地与劳工改革，随后的国家暴力和内战深刻影响政治信任。1996年和平协议并未自动完成军队问责、土地再分配或原住民政治平等。调查委员会、法院判决和受害者组织提供不同层次的历史证据，使用时应注明其调查范围。研究危地马拉民主，必须重视地方市镇政治与全国精英联盟之间的张力。
+1954年政变中断了革命十年的土地与劳工改革，随后的国家暴力和内战深刻影响政治信任。1996年和平协议并未自动完成军队问责、土地再分配或原住民政治平等。调查委员会、法院判决和受害者组织提供不同层次的历史证据，使用时应注明其调查范围。研究危地马拉（Guatemala）民主，必须重视地方市镇政治与全国精英联盟之间的张力。
 
 ## 四、经济结构 / Estructura económica
 
@@ -94,7 +94,7 @@
 
 > Guatemala está formada por diversos grupos étnicos
 
-— 危地马拉1985年宪法，第66条（节录，1993年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Guatemala_1993?lang=es)。
+— 危地马拉（Guatemala）1985年宪法，第66条（节录，1993年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Guatemala_1993?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -106,8 +106,8 @@
 1. Greg Grandin、Deborah T. Levenson、Elizabeth Oglesby 编，The Guatemala Reader，Duke University Press，2011 — https://www.dukeupress.edu/the-guatemala-reader
 2. Greg Grandin，The Blood of Guatemala，Duke University Press，2000 — https://www.dukeupress.edu/the-blood-of-guatemala?viewby=title
 3. Comisión para el Esclarecimiento Histórico，Guatemala: Memoria del Silencio，1999（书目条目；暂不提供未经核实的直达链接）
-4. 危地马拉法律原文节录出处：危地马拉1985年宪法，第66条（节录，1993年修订文本） — https://www.constituteproject.org/constitution/Guatemala_1993?lang=es
+4. 危地马拉（Guatemala）法律原文节录出处：危地马拉（Guatemala）1985年宪法，第66条（节录，1993年修订文本） — https://www.constituteproject.org/constitution/Guatemala_1993?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

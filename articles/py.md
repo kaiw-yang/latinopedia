@@ -1,8 +1,8 @@
-# 巴拉圭 · Paraguay
+# 巴拉圭（Paraguay） · Paraguay
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-巴拉圭以瓜拉尼语的广泛使用和三国同盟战争的深远影响著称，但理解其现代社会，还需考察土地高度集中、农村农业出口、长期独裁与民主化后的政治网络。
+巴拉圭（Paraguay）以瓜拉尼语的广泛使用和三国同盟战争的深远影响著称，但理解其现代社会，还需考察土地高度集中、农村农业出口、长期独裁与民主化后的政治网络。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Paraguay**
@@ -15,17 +15,17 @@
 ### 02. 1811—1840 · 独立与国家集中化
 *Independencia*
 
-1811年脱离西班牙统治，弗朗西亚长期执政重组对外贸易与土地秩序；国家建设及其社会代价需要并读。
+1811年脱离西班牙（España）统治，弗朗西亚（José Gaspar Rodríguez de Francia）长期执政重组对外贸易与土地秩序；国家建设及其社会代价需要并读。
 
 ### 03. 1840—1864 · 铁路、军队与发展政策
 *Modernización estatal*
 
-洛佩斯时期推动基础设施与对外联系；“独立自主发展”叙事须与国家强制劳动和政治权力集中一并考察。
+洛佩斯（López）时期推动基础设施与对外联系；“独立自主发展”叙事须与国家强制劳动和政治权力集中一并考察。
 
 ### 04. 1864—1870 · 三国同盟战争
 *Guerra de la Triple Alianza*
 
-对巴西、阿根廷和乌拉圭的战争造成沉重人口与经济损失。战争责任、人口损失估计和历史记忆仍存在学术争论。
+对巴西（Brasil）、阿根廷（Argentina）和乌拉圭（Uruguay）的战争造成沉重人口与经济损失。战争责任、人口损失估计和历史记忆仍存在学术争论。
 
 ### 05. 1870—1930 · 土地私有化与出口模式
 *Concentración de la tierra*
@@ -35,9 +35,9 @@
 ### 06. 1932—1935 · 查科战争
 *Guerra del Chaco*
 
-与玻利维亚的战争推动民族主义和军队政治，也改变国家对边境原住民地区的控制。
+与玻利维亚（Bolivia）的战争推动民族主义和军队政治，也改变国家对边境原住民地区的控制。
 
-### 07. 1954—1989 · 斯特罗斯纳独裁
+### 07. 1954—1989 · 斯特罗斯纳（Alfredo Stroessner）独裁
 *Dictadura de Stroessner*
 
 长期军事—政党统治依赖镇压、庇护关系和土地分配。调查“非法取得土地”需依据转型正义档案，而非只观察领土所有权。
@@ -57,26 +57,26 @@
 | 1864—1870 | **三国同盟战争**（Guerra de la Triple Alianza） |
 | 1870—1930 | **土地私有化与出口模式**（Concentración de la tierra） |
 | 1932—1935 | **查科战争**（Guerra del Chaco） |
-| 1954—1989 | **斯特罗斯纳独裁**（Dictadura de Stroessner） |
+| 1954—1989 | **斯特罗斯纳（Alfredo Stroessner）独裁**（Dictadura de Stroessner） |
 | 1989年以来 | **民主化、双语与农业出口**（Transición y bilingüismo） |
 
 ## 三、政治与制度 / Política e instituciones
 
 宪法采用单一制、权力分立与选举制度，但传统政党网络和地方土地利益影响行政资源分配。理解民主化要比较政党竞争、司法独立和历史土地权恢复。
 
-巴拉圭19世纪的国家形成与三国同盟战争（1864—1870）紧密相连，战争造成的人口和生产体系重创不能简化为某一人物的责任。20世纪的斯特罗斯纳（Alfredo Stroessner）独裁把军队、执政党与土地分配捆绑，1989年后政治开放仍须面对这一遗产。选举竞争、地方土地制度和公共行政能力的发展速度并不相同，因而民主化不是一个单一年份可以描述的过程。
+巴拉圭（Paraguay）19世纪的国家形成与三国同盟战争（1864—1870）紧密相连，战争造成的人口和生产体系重创不能简化为某一人物的责任。20世纪的斯特罗斯纳（Alfredo Stroessner）独裁把军队、执政党与土地分配捆绑，1989年后政治开放仍须面对这一遗产。选举竞争、地方土地制度和公共行政能力的发展速度并不相同，因而民主化不是一个单一年份可以描述的过程。
 
 ## 四、经济结构 / Estructura económica
 
 大豆、畜牧业、水电出口连接国际市场，但不同农户的技术、土地和信贷条件差异显著。大型农业企业的扩张常与农民生计、农药暴露和土地争议同时出现。
 
-大豆、牛肉和伊泰普等水电工程深刻影响巴拉圭的出口收入与财政争议。大型农业生产可以提高出口效率，也可能促使土地集中、农药风险与小农迁移；需要分别检验土地登记与农村家庭的收入来源。与巴西和阿根廷的跨境物流及商贸网络，又使国家经济治理难以仅用国内产业分类概括。
+大豆、牛肉和伊泰普等水电工程深刻影响巴拉圭（Paraguay）的出口收入与财政争议。大型农业生产可以提高出口效率，也可能促使土地集中、农药风险与小农迁移；需要分别检验土地登记与农村家庭的收入来源。与巴西（Brasil）和阿根廷（Argentina）的跨境物流及商贸网络，又使国家经济治理难以仅用国内产业分类概括。
 
 ## 五、社会与阶级 / Sociedad y clases
 
 城乡、原住民与非原住民、瓜拉尼语与西班牙语的边界并不完全重合。瓜拉尼语的全国性公共使用不意味着所有原住民族享有同等政治经济权利。
 
-瓜拉尼语（Guaraní）拥有广泛社会使用基础，使巴拉圭区别于许多把原住民语言边缘化的国家。不过广泛口语使用并不自动意味着行政、司法与高等教育机会平等。研究阶级可把语言选择与城市就业、学校资源和农村土地联系起来，避免将双语现象浪漫化为没有社会差异的文化共同体。
+瓜拉尼语（Guaraní）拥有广泛社会使用基础，使巴拉圭（Paraguay）区别于许多把原住民语言边缘化的国家。不过广泛口语使用并不自动意味着行政、司法与高等教育机会平等。研究阶级可把语言选择与城市就业、学校资源和农村土地联系起来，避免将双语现象浪漫化为没有社会差异的文化共同体。
 
 ## 六、文化、语言与身份 / Cultura, lenguas e identidades
 
@@ -94,7 +94,7 @@
 
 > El Paraguay es un país pluricultural y bilingüe
 
-— 巴拉圭1992年宪法，第140条；[核对原文](https://www.constituteproject.org/constitution/Paraguay_2011?lang=es)。
+— 巴拉圭（Paraguay）1992年宪法，第140条；[核对原文](https://www.constituteproject.org/constitution/Paraguay_2011?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -106,8 +106,8 @@
 1. Andrew Nickson，Historical Dictionary of Paraguay（第3版），Rowman & Littlefield，2015（书目条目；暂不提供未经核实的直达链接）
 2. John Hoyt Williams，The Rise and Fall of the Paraguayan Republic, 1800–1870，University of Texas Press，1979（书目条目；暂不提供未经核实的直达链接）
 3. Comisión de Verdad y Justicia，Informe Final，2008（书目条目；暂不提供未经核实的直达链接）
-4. 巴拉圭法律原文节录出处：巴拉圭1992年宪法，第140条 — https://www.constituteproject.org/constitution/Paraguay_2011?lang=es
+4. 巴拉圭（Paraguay）法律原文节录出处：巴拉圭（Paraguay）1992年宪法，第140条 — https://www.constituteproject.org/constitution/Paraguay_2011?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
