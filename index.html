@@ -1070,5 +1070,5 @@ const countrySocietyEssays = {
 
 function init(){initLibrarySearch();renderNav();document.getElementById('homeCountries').innerHTML=['br','mx','ar','cl','cu'].map(id=>countryCard(countries.find(c=>c.id===id))).join('');document.querySelectorAll('[data-region]').forEach(b=>b.addEventListener('click',()=>{state.region=b.dataset.region;renderCountries()}));document.getElementById('countrySearch').addEventListener('input',renderCountries);document.querySelectorAll('[data-era]').forEach(b=>b.addEventListener('click',()=>{state.era=b.dataset.era;renderTimeline()}));document.querySelectorAll('[data-topic]').forEach(b=>b.addEventListener('click',()=>{state.topic=b.dataset.topic;renderBooks()}));route();window.addEventListener('hashchange',route)}init();
 </script>
-<script src="countries/integration.js"></script>
+<script src="countries/integration.js?v=2"></script>
 </body></html>
