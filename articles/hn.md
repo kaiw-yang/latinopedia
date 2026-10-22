@@ -1,8 +1,8 @@
-# 洪都拉斯（Honduras） · Honduras
+# 洪都拉斯 · Honduras
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-“香蕉共和国”是洪都拉斯（Honduras）历史的重要批判概念，却不足以替代对其内部地区、工会、农业资本与国家形成的研究。北部沿海、内陆高地和加勒比海岸具有差异显著的社会生活。
+“香蕉共和国”是洪都拉斯历史的重要批判概念，却不足以替代对其内部地区、工会、农业资本与国家形成的研究。北部沿海、内陆高地和加勒比海岸具有差异显著的社会生活。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Honduras**
@@ -15,12 +15,12 @@
 ### 02. 1821—19世纪后期 · 独立与联邦解体
 *República y región*
 
-脱离西班牙（España）与中美洲联邦解体并非同一事件；国家机构面对地区精英与地方军事权力持续调整。
+脱离西班牙与中美洲联邦解体并非同一事件；国家机构面对地区精英与地方军事权力持续调整。
 
 ### 03. 1870—1930 · 香蕉出口与外资
 *Enclave bananero*
 
-跨国果业公司扩大铁路、港口与农业用地，但也创造新的工会、城镇与地方政治。不能把洪都拉斯（Honduras）国家简化为外企傀儡。
+跨国果业公司扩大铁路、港口与农业用地，但也创造新的工会、城镇与地方政治。不能把洪都拉斯国家简化为外企傀儡。
 
 ### 04. 1930—1954 · 威权与劳工组织
 *Movimiento obrero*
@@ -30,7 +30,7 @@
 ### 05. 1960—1980年代 · 军政与冷战基地
 *Militarismo y Guerra Fría*
 
-军政干预和美国（United States）对中美洲政策将洪都拉斯（Honduras）置于区域战争网络，尽管其本国内战路径与邻国不同。
+军政干预和美国对中美洲政策将洪都拉斯置于区域战争网络，尽管其本国内战路径与邻国不同。
 
 ### 06. 1982—1990年代 · 形式民主与社会调整
 *Transición política*
@@ -62,9 +62,9 @@
 
 ## 三、政治与制度 / Política e instituciones
 
-洪都拉斯（Honduras）是总统制共和国；对2009年政变后的政治分析应区分选举程序、司法与军事机构和民间社会自由。区域治理能力与安全资源的差异很大。
+洪都拉斯是总统制共和国；对2009年政变后的政治分析应区分选举程序、司法与军事机构和民间社会自由。区域治理能力与安全资源的差异很大。
 
-洪都拉斯（Honduras）国家与香蕉企业的关系塑造了“香蕉共和国”的历史标签，但这一词汇不能取代对税收、铁路、土地契约与政治联盟的具体分析。20世纪军方权力和2009年宪政危机均影响制度信任。研究总统与议会之外的治理，还须考察地方政府、商业精英、社区组织及公共安全机构如何分配资源与权力。
+洪都拉斯国家与香蕉企业的关系塑造了“香蕉共和国”的历史标签，但这一词汇不能取代对税收、铁路、土地契约与政治联盟的具体分析。20世纪军方权力和2009年宪政危机均影响制度信任。研究总统与议会之外的治理，还须考察地方政府、商业精英、社区组织及公共安全机构如何分配资源与权力。
 
 ## 四、经济结构 / Estructura económica
 
@@ -82,7 +82,7 @@
 
 加里富纳音乐、舞蹈和语言是活的跨国文化实践；小农与港口工人的口述历史亦修正外资公司主导的单一叙事。
 
-加勒比海岸的加里富纳语言、音乐与仪式揭示洪都拉斯（Honduras）不仅是西语与大陆农业社会。伦卡社群的土地和社区文化也对国家身份提出多元解释。旅游宣传经常放大某些“民族特色”，研究时应比较社区自述、文化机构和商业展示，留意谁的土地和劳动被省略。
+加勒比海岸的加里富纳语言、音乐与仪式揭示洪都拉斯不仅是西语与大陆农业社会。伦卡社群的土地和社区文化也对国家身份提出多元解释。旅游宣传经常放大某些“民族特色”，研究时应比较社区自述、文化机构和商业展示，留意谁的土地和劳动被省略。
 
 ## 七、分析框架：四个层次
 
@@ -94,7 +94,7 @@
 
 > Honduras es un Estado de Derecho, soberano, constituido como República libre
 
-— 洪都拉斯（Honduras）1982年宪法，第1条（节录，2013年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Honduras_2013?lang=es)。
+— 洪都拉斯1982年宪法，第1条（节录，2013年修订文本）；[核对原文](https://www.constituteproject.org/constitution/Honduras_2013?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -106,8 +106,8 @@
 1. Darío A. Euraque，Reinterpreting the Banana Republic，University of North Carolina Press，1997 — https://uncpress.org/9780807846049/reinterpreting-the-banana-republic/
 2. Dana Frank，The Long Honduran Night: Resistance, Terror, and the United States in the Aftermath of the Coup，Haymarket Books，2018（书目条目；暂不提供未经核实的直达链接）
 3. 联合国教科文组织，Garífuna language, dance and music — https://ich.unesco.org/
-4. 洪都拉斯（Honduras）法律原文节录出处：洪都拉斯（Honduras）1982年宪法，第1条（节录，2013年修订文本） — https://www.constituteproject.org/constitution/Honduras_2013?lang=es
+4. 洪都拉斯法律原文节录出处：洪都拉斯1982年宪法，第1条（节录，2013年修订文本） — https://www.constituteproject.org/constitution/Honduras_2013?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

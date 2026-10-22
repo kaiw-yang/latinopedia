@@ -1,8 +1,8 @@
-# 萨尔瓦多（El Salvador） · El Salvador
+# 萨尔瓦多 · El Salvador
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-萨尔瓦多（El Salvador）历史中的土地集中、咖啡出口与内战塑造了政治参与的边界。当代高强度治安政策和大规模移民网络，应放在更长的国家暴力、社会组织与安全需求的历史中审视。
+萨尔瓦多历史中的土地集中、咖啡出口与内战塑造了政治参与的边界。当代高强度治安政策和大规模移民网络，应放在更长的国家暴力、社会组织与安全需求的历史中审视。
 
 ## 一、历史形成：八个问题
 **Formación histórica / El Salvador**
@@ -40,7 +40,7 @@
 ### 07. 1990—2010年代 · 移民、汇款和帮派暴力
 *Migración y pandillas*
 
-内战后的家庭迁移、美国（United States）的遣返政策和城市治安问题相互交织，不宜将帮派起因归结为某一种“国民文化”。
+内战后的家庭迁移、美国的遣返政策和城市治安问题相互交织，不宜将帮派起因归结为某一种“国民文化”。
 
 ### 08. 2020年代 · 紧急状态与权利争论
 *Seguridad y garantías*
@@ -68,7 +68,7 @@
 
 ## 四、经济结构 / Estructura económica
 
-制造业、服务业和海外汇款支撑家庭消费；劳动者对美国（United States）市场与海外雇主的联系使经济高度跨国化。宏观汇款增长不代表劳动条件改善，亦不应混同正式出口和家庭私人转账。
+制造业、服务业和海外汇款支撑家庭消费；劳动者对美国市场与海外雇主的联系使经济高度跨国化。宏观汇款增长不代表劳动条件改善，亦不应混同正式出口和家庭私人转账。
 
 咖啡曾支撑高度集中的农村土地秩序，制造业、服务业和海外汇款后来扩展了经济结构。美元化使本国无法独立调整汇率，但对通胀和就业的影响仍取决于财政、国际物价和产业条件。汇款带来家庭层面的住房、教育和消费机会，也可能使国内政策更加依赖境外劳动者收入；应区分宏观汇款总额与具体家庭的福利。
 
@@ -76,13 +76,13 @@
 
 农业土地集中与城市非正规就业共同影响阶级差异。研究内战应关注普通农民为何参与高风险动员、教会网络如何作用，以及战争后社会组织怎样转型。
 
-内战难民与此后的移民形成跨代的社会网络，萨尔瓦多（El Salvador）家庭生活因此常跨越美国（United States）和中美洲边界。帮派暴力涉及地方机会、青年身份、驱逐与国家执法的交互作用，但不能把所有年轻贫困男性描述为潜在成员。性别暴力、监禁者家庭的照料压力和返乡移民的融入，也是理解安全政策社会效果的重要维度。
+内战难民与此后的移民形成跨代的社会网络，萨尔瓦多家庭生活因此常跨越美国和中美洲边界。帮派暴力涉及地方机会、青年身份、驱逐与国家执法的交互作用，但不能把所有年轻贫困男性描述为潜在成员。性别暴力、监禁者家庭的照料压力和返乡移民的融入，也是理解安全政策社会效果的重要维度。
 
 ## 六、文化、语言与身份 / Cultura, lenguas e identidades
 
 原住民语言恢复、壁画、证言文学与海外社群文化共同组成社会记忆。战争受难不应是唯一文化主题；日常教育与社区创造也值得进入国家叙事。
 
-萨尔瓦多（El Salvador）文学和绘画中的内战记忆，与移民社群的流行文化共同塑造国家归属。传统饮食、宗教游行和社区节庆在海外获得新的公共功能，但不能因此把文化理解为迁移后原封不动的“祖国传统”。口述历史尤其可以帮助辨别官方和平叙事与家庭丧失经验之间的差异。
+萨尔瓦多文学和绘画中的内战记忆，与移民社群的流行文化共同塑造国家归属。传统饮食、宗教游行和社区节庆在海外获得新的公共功能，但不能因此把文化理解为迁移后原封不动的“祖国传统”。口述历史尤其可以帮助辨别官方和平叙事与家庭丧失经验之间的差异。
 
 ## 七、分析框架：四个层次
 
@@ -94,20 +94,20 @@
 
 > El Salvador reconoce a la persona humana como el origen y el fin de la actividad del Estado
 
-— 萨尔瓦多（El Salvador）1983年宪法，第1条（节录，2014年修订文本）；[核对原文](https://www.constituteproject.org/constitution/El_Salvador_2014?lang=es)。
+— 萨尔瓦多1983年宪法，第1条（节录，2014年修订文本）；[核对原文](https://www.constituteproject.org/constitution/El_Salvador_2014?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
 - 当暴力犯罪明显下降时，如何独立评估司法程序与公民权保障？
-- 为什么跨国家庭网络是理解萨尔瓦多（El Salvador）经济和政治的核心变量？
+- 为什么跨国家庭网络是理解萨尔瓦多经济和政治的核心变量？
 
 ## 十、参考文献 / Referencias
 
 1. Elisabeth Jean Wood，Insurgent Collective Action and Civil War in El Salvador，Cambridge University Press，2003 — https://www.cambridge.org/core/books/insurgent-collective-action-and-civil-war-in-el-salvador/70D35F82CEEB47F2F14957EE31B5BFD6/listing
 2. Comisión de la Verdad para El Salvador，De la locura a la esperanza，1993（书目条目；暂不提供未经核实的直达链接）
-3. 联合国，萨尔瓦多（El Salvador）和平进程档案 — https://peacekeeping.un.org/
-4. 萨尔瓦多（El Salvador）法律原文节录出处：萨尔瓦多（El Salvador）1983年宪法，第1条（节录，2014年修订文本） — https://www.constituteproject.org/constitution/El_Salvador_2014?lang=es
+3. 联合国，萨尔瓦多和平进程档案 — https://peacekeeping.un.org/
+4. 萨尔瓦多法律原文节录出处：萨尔瓦多1983年宪法，第1条（节录，2014年修订文本） — https://www.constituteproject.org/constitution/El_Salvador_2014?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

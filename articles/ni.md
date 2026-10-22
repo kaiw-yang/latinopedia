@@ -1,8 +1,8 @@
-# 尼加拉瓜（Nicaragua） · Nicaragua
+# 尼加拉瓜 · Nicaragua
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-尼加拉瓜（Nicaragua）的革命史不应被简单划分为“解放”与“背叛”两个阶段。美国（United States）干预、索摩查（Somoza）家族统治、桑地诺（Augusto César Sandino）革命、冷战战争和革命后制度演变，构成国家与社会之间不断重组的关系。
+尼加拉瓜的革命史不应被简单划分为“解放”与“背叛”两个阶段。美国干预、索摩查（Somoza）家族统治、桑地诺（Augusto César Sandino）革命、冷战战争和革命后制度演变，构成国家与社会之间不断重组的关系。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Nicaragua**
@@ -15,12 +15,12 @@
 ### 02. 1821—1912 · 独立、运河构想与外部压力
 *Independencia e intervención*
 
-脱离西班牙（España）和中美洲联邦解体后，运河路线与美国（United States）资本利益加剧外交争端，地方政治竞争持续。
+脱离西班牙和中美洲联邦解体后，运河路线与美国资本利益加剧外交争端，地方政治竞争持续。
 
-### 03. 1912—1933 · 美国（United States）占领与桑地诺（Augusto César Sandino）
+### 03. 1912—1933 · 美国占领与桑地诺（Augusto César Sandino）
 *Ocupación y Sandino*
 
-美国（United States）海军陆战队干预引发反占领游击斗争；奥古斯托·桑地诺（Augusto César Sandino）成为民族主义与后世革命的重要符号。
+美国海军陆战队干预引发反占领游击斗争；奥古斯托·桑地诺（Augusto César Sandino）成为民族主义与后世革命的重要符号。
 
 ### 04. 1936—1979 · 索摩查（Somoza）家族统治
 *Somocismo*
@@ -35,7 +35,7 @@
 ### 06. 1980年代 · 反革命战争与冷战
 *La Contra*
 
-美国（United States）支持的反革命武装与桑地诺（Augusto César Sandino）政府发生长期战争；军政动员、征兵、经济封锁与公民权争议共同影响日常生活。
+美国支持的反革命武装与桑地诺（Augusto César Sandino）政府发生长期战争；军政动员、征兵、经济封锁与公民权争议共同影响日常生活。
 
 ### 07. 1990—2006 · 选举轮替与市场调整
 *Transición electoral*
@@ -53,7 +53,7 @@
 |:--|:--|
 | 殖民时期 | **太平洋与加勒比两种空间**（Regiones coloniales） |
 | 1821—1912 | **独立、运河构想与外部压力**（Independencia e intervención） |
-| 1912—1933 | **美国（United States）占领与桑地诺（Augusto César Sandino）**（Ocupación y Sandino） |
+| 1912—1933 | **美国占领与桑地诺（Augusto César Sandino）**（Ocupación y Sandino） |
 | 1936—1979 | **索摩查（Somoza）家族统治**（Somocismo） |
 | 1979 | **桑地诺（Augusto César Sandino）革命**（Revolución Sandinista） |
 | 1980年代 | **反革命战争与冷战**（La Contra） |
@@ -64,7 +64,7 @@
 
 革命组织进入国家后，其与军队、工会、法院和民间社团的关系会发生结构性改变。研究当代体制应观察选举竞争条件、言论自由、司法监督及公民组织空间，而不仅沿用1980年代阵营划分。
 
-1979年桑地诺（Augusto César Sandino）革命推翻索摩查（Somoza）家族统治，随后革命政府、反政府武装及美国（United States）干预造成长期政治和社会代价。1990年的选举轮替开启另一轮制度安排，但革命的社会组织与政治记忆并未消失。近年来围绕权力集中、反对派空间、司法机构和公民权的变化，需要分年份核对法律和独立资料，避免简单将革命年代与当代国家划为一条不变的意识形态直线。
+1979年桑地诺（Augusto César Sandino）革命推翻索摩查（Somoza）家族统治，随后革命政府、反政府武装及美国干预造成长期政治和社会代价。1990年的选举轮替开启另一轮制度安排，但革命的社会组织与政治记忆并未消失。近年来围绕权力集中、反对派空间、司法机构和公民权的变化，需要分年份核对法律和独立资料，避免简单将革命年代与当代国家划为一条不变的意识形态直线。
 
 ## 四、经济结构 / Estructura económica
 
@@ -80,9 +80,9 @@
 
 ## 六、文化、语言与身份 / Cultura, lenguas e identidades
 
-诗歌、革命壁画、宗教团体与口述史同时是文化与政治实践。加勒比地区语言和自治要求提醒我们，西班牙语民族主义不能覆盖整个尼加拉瓜（Nicaragua）。
+诗歌、革命壁画、宗教团体与口述史同时是文化与政治实践。加勒比地区语言和自治要求提醒我们，西班牙语民族主义不能覆盖整个尼加拉瓜。
 
-革命壁画、歌曲和识字运动产生了高度鲜明的公共文化记忆，但同一文化遗产可能被不同政治世代重新解释。加勒比海岸的英语克里奥尔语、米斯基托语及非裔传统说明“尼加拉瓜（Nicaragua）文化”并不等于单一西语文化。可比较国家学校叙事、社区艺术和海外流亡者的回忆录，讨论文化作品既动员团结又呈现分歧的方式。
+革命壁画、歌曲和识字运动产生了高度鲜明的公共文化记忆，但同一文化遗产可能被不同政治世代重新解释。加勒比海岸的英语克里奥尔语、米斯基托语及非裔传统说明“尼加拉瓜文化”并不等于单一西语文化。可比较国家学校叙事、社区艺术和海外流亡者的回忆录，讨论文化作品既动员团结又呈现分歧的方式。
 
 ## 七、分析框架：四个层次
 
@@ -94,7 +94,7 @@
 
 > La independencia, la soberanía y la autodeterminación nacional, son derechos irrenunciables del pueblo
 
-— 尼加拉瓜（Nicaragua）1987年宪法，第1条（节录，2014年修订文本）；[核对原文](https://constituteproject.org/constitution/Nicaragua_2014?lang=es)。
+— 尼加拉瓜1987年宪法，第1条（节录，2014年修订文本）；[核对原文](https://constituteproject.org/constitution/Nicaragua_2014?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -106,8 +106,8 @@
 1. Mateo Jarquín，The Sandinista Revolution: A Global Latin American History，UNC Press，2024 — https://uncpress.org/9798890887283/the-sandinista-revolution/
 2. Jeffrey L. Gould，To Lead as Equals: Rural Protest and Political Consciousness in Chinandega, Nicaragua, 1912–1979，UNC Press，1990 — https://uncpress.org/9780807842751/to-lead-as-equals/
 3. Lorraine Bayard de Volo，Mothers of Heroes and Martyrs，Johns Hopkins University Press，2001（书目条目；暂不提供未经核实的直达链接）
-4. 尼加拉瓜（Nicaragua）法律原文节录出处：尼加拉瓜（Nicaragua）1987年宪法，第1条（节录，2014年修订文本） — https://constituteproject.org/constitution/Nicaragua_2014?lang=es
+4. 尼加拉瓜法律原文节录出处：尼加拉瓜1987年宪法，第1条（节录，2014年修订文本） — https://constituteproject.org/constitution/Nicaragua_2014?lang=es
 5. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 6. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 7. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+8. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

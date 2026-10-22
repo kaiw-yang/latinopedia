@@ -1,8 +1,8 @@
-# 玻利维亚（Bolivia） · Bolivia
+# 玻利维亚 · Bolivia
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-玻利维亚（Bolivia）的民族国家建设始终与原住民多数人口、矿业出口、安第斯高地和东部低地的区域政治联系在一起。多民族宪制不是历史的突然开端，而是长期社区动员、工会政治和反殖民思想的制度表达。
+玻利维亚的民族国家建设始终与原住民多数人口、矿业出口、安第斯高地和东部低地的区域政治联系在一起。多民族宪制不是历史的突然开端，而是长期社区动员、工会政治和反殖民思想的制度表达。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Bolivia**
@@ -76,7 +76,7 @@
 
 矿工工会、农民联合会、妇女市场网络与原住民组织都曾构成政治行动者。“原住民”不是内部无差异的社会阶层，语言、地理、资产和政治联盟会产生交叉分化。
 
-玻利维亚（Bolivia）的原住民多数经验并不意味着所有社区具有相同语言、阶级和地理位置。高原艾马拉社群、克丘亚农村、低地民族与城市混合家庭，对多民族国家及发展项目的看法可能不同。水战争、天然气冲突和公路开发争议说明，反私有化、资源主权和生态权利并不总能汇入同一诉求。妇女在市场贸易、社区组织和政治运动中的作用也值得独立研究。
+玻利维亚的原住民多数经验并不意味着所有社区具有相同语言、阶级和地理位置。高原艾马拉社群、克丘亚农村、低地民族与城市混合家庭，对多民族国家及发展项目的看法可能不同。水战争、天然气冲突和公路开发争议说明，反私有化、资源主权和生态权利并不总能汇入同一诉求。妇女在市场贸易、社区组织和政治运动中的作用也值得独立研究。
 
 ## 六、文化、语言与身份 / Cultura, lenguas e identidades
 
@@ -94,7 +94,7 @@
 
 > Bolivia se constituye en un Estado Unitario Social de Derecho Plurinacional Comunitario
 
-— 玻利维亚（Bolivia）2009年宪法，第1条（节录）；[核对原文](https://www.constituteproject.org/constitution/Bolivia_2009?lang=es)。
+— 玻利维亚2009年宪法，第1条（节录）；[核对原文](https://www.constituteproject.org/constitution/Bolivia_2009?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
@@ -107,8 +107,8 @@
 2. Silvia Rivera Cusicanqui，Oprimidos pero no vencidos，1984（书目条目；暂不提供未经核实的直达链接）
 3. Nancy Grey Postero，Now We Are Citizens: Indigenous Politics in Postmulticultural Bolivia，Stanford University Press，2007（书目条目；暂不提供未经核实的直达链接）
 4. Brooke Larson，Trials of Nation Making，Cambridge University Press，2004（书目条目；暂不提供未经核实的直达链接）
-5. 玻利维亚（Bolivia）法律原文节录出处：玻利维亚（Bolivia）2009年宪法，第1条（节录） — https://www.constituteproject.org/constitution/Bolivia_2009?lang=es
+5. 玻利维亚法律原文节录出处：玻利维亚2009年宪法，第1条（节录） — https://www.constituteproject.org/constitution/Bolivia_2009?lang=es
 6. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 7. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 8. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-9. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+9. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/

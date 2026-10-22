@@ -453,6 +453,8 @@
   Object.assign(names, {"洛佩斯":"López", "格雷罗":null});
   Object.assign(names, {"圣佩德罗苏拉": null, "蒙特祖玛二世": "Moctezuma II", "库奥特莫克": "Cuauhtémoc", "费尔南德斯": "Florestan Fernandes", "法莱托": "Enzo Faletto", "盖亚诺": "Eduardo Galeano", "特蕾莎·P. R.·卡尔代拉": "Teresa P. R. Caldeira"});
   const knownOriginals = new Set(Object.values(names));
+  // Country names stay unglossed in running text; each country page shows its local name under the title.
+  const countryNames = new Set(["巴西", "墨西哥", "阿根廷", "智利", "哥伦比亚", "秘鲁", "玻利维亚", "委内瑞拉", "厄瓜多尔", "巴拉圭", "乌拉圭", "危地马拉", "萨尔瓦多", "洪都拉斯", "尼加拉瓜", "哥斯达黎加", "巴拿马", "古巴", "多米尼加共和国", "多米尼加", "海地", "圭亚那", "苏里南", "西班牙", "葡萄牙", "美国", "英国", "法国", "德国", "意大利", "加拿大", "中国", "日本", "印度", "苏联", "俄罗斯", "荷兰","法属圭亚那","牙买加","巴巴多斯","伯利兹","特立尼达和多巴哥","巴哈马","格林纳达","波多黎各"]);
   const pattern = new RegExp(Object.keys(names).sort((a,b)=>b.length-a.length).map(s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'), 'gu');
   function annotate(text, context = '') {
     return text.replace(pattern, (name, offset) => {
@@ -465,6 +467,7 @@
       if (name === '苏克雷' && /^(指挥|率军|则在早期)/.test(after)) original = 'Antonio José de Sucre';
       // Existing original-language annotations can include dates or a shorter personal name.
       const existing = after.match(/^\s*[（(]([^（）()]+)[）)]/);
+      if (countryNames.has(name) && original === names[name]) return name;
       // Names written the same in the original (e.g. 中国, 日本) need no gloss.
       if (!original || original === name || (existing && (knownOriginals.has(existing[1].split(/[，,]/)[0].trim()) || existing[1].startsWith(original) || original.startsWith(existing[1].split(/[，,]/)[0].trim())))) return name;
       return name + '（' + original + '）';

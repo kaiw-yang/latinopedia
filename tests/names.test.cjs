@@ -3,7 +3,7 @@ const {annotate} = require('../assets/names.js');
 const cases = [
  ['圣佩德罗苏拉','圣佩德罗苏拉'],
  ['蒙特祖玛二世','蒙特祖玛二世（Moctezuma II）'],
- ['巴西和墨西哥','巴西（Brasil）和墨西哥（México）'],
+ ['巴西和墨西哥','巴西和墨西哥'],
  ['萨尔瓦多·阿连德','萨尔瓦多·阿连德（Salvador Allende）'],
  ['巴西利亚、墨西哥城、沿海地区','巴西利亚、墨西哥城、沿海地区'],
  ['伊达尔戈（Miguel Hidalgo）','伊达尔戈（Miguel Hidalgo）'],
@@ -11,7 +11,7 @@ const cases = [
  ['罗梅罗政府与罗梅罗大主教','罗梅罗（Carlos Humberto Romero）政府与罗梅罗（Óscar Arnulfo Romero）大主教'],
  ['首都苏克雷和苏克雷率军','首都苏克雷和苏克雷（Antonio José de Sucre）率军'],
  ['苏克雷贬值；首都苏克雷','苏克雷贬值；首都苏克雷'],
- ['萨尔瓦多','萨尔瓦多（El Salvador）'],
+ ['萨尔瓦多','萨尔瓦多'],
  ['萨尔瓦多','萨尔瓦多（Salvador）','br'],
  ['格雷罗等力量与格雷罗州','格雷罗（Vicente Guerrero）等力量与格雷罗州'],
 ];

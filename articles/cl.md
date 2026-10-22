@@ -1,8 +1,8 @@
-# 智利（Chile） · Chile
+# 智利 · Chile
 
 > Latinopedia / 国家研究专辑 · 2026-10-16 · 内容研究版（非实时数据库）
 
-智利（Chile）经常被描述为“经济开放的成功范例”，但铜矿依赖、1973年政变、军政府时期的市场化改革、马普切土地争议及2019年社会抗议共同构成更完整的历史。
+智利经常被描述为“经济开放的成功范例”，但铜矿依赖、1973年政变、军政府时期的市场化改革、马普切土地争议及2019年社会抗议共同构成更完整的历史。
 
 ## 一、历史形成：八个问题
 **Formación histórica / Chile**
@@ -62,7 +62,7 @@
 
 ## 三、政治与制度 / Política e instituciones
 
-智利（Chile）是单一制总统制共和国。对军政府宪法遗产的批判贯穿民主化后多个阶段。分析宪法改革必须区分草案、公投结果及真正生效的文本，不能把未通过的制宪方案当成现行制度。
+智利是单一制总统制共和国。对军政府宪法遗产的批判贯穿民主化后多个阶段。分析宪法改革必须区分草案、公投结果及真正生效的文本，不能把未通过的制宪方案当成现行制度。
 
 1973年政变后的制度延续不是“军政府结束便自动完成民主化”的线性过程。1990年后民选政府逐步调整军事、选举和司法制度，但宪法框架与经济社会政策长期成为协商对象。2019年的社会抗议开启新一轮制宪进程，2022年与2023年两份草案分别在公投中失败；不能把任何一份未获通过的草案视为现行宪法。研究政治参与时应区分总统选举、社会运动、制宪机制与原住民代表制度。
 
@@ -70,7 +70,7 @@
 
 铜矿、林业、农业出口及服务业与国际市场高度相连；养老金、教育和公共交通成为分配冲突领域。需要区分实际贫困减少与生活成本、私人债务、服务质量和风险负担的不平等。
 
-智利（Chile）因铜矿出口、财政规则与较早的市场开放而常被放在拉美比较经济研究的中心。不过，“增长”与“保障”是不同问题：私人养老金、教育贷款、医疗服务和城市交通的费用，会改变家庭对风险的感受。矿业收入也具有空间分配问题：北部矿区承受生态与用水压力，消费和决策则往往集中于首都。对新自由主义的评价必须把宏观指标、劳工组织与家庭债务分开考察。
+智利因铜矿出口、财政规则与较早的市场开放而常被放在拉美比较经济研究的中心。不过，“增长”与“保障”是不同问题：私人养老金、教育贷款、医疗服务和城市交通的费用，会改变家庭对风险的感受。矿业收入也具有空间分配问题：北部矿区承受生态与用水压力，消费和决策则往往集中于首都。对新自由主义的评价必须把宏观指标、劳工组织与家庭债务分开考察。
 
 ## 五、社会与阶级 / Sociedad y clases
 
@@ -94,11 +94,11 @@
 
 > Las personas nacen libres e iguales en dignidad y derechos
 
-— 智利（Chile）1980年宪法（修订本），第1条（节录，非2022/2023未通过草案）；[核对原文](https://constituteproject.org/constitution/Chile_2021?lang=es)。
+— 智利1980年宪法（修订本），第1条（节录，非2022/2023未通过草案）；[核对原文](https://constituteproject.org/constitution/Chile_2021?lang=es)。
 
 ## 九、研究练习 / Preguntas de investigación
 
-- “智利（Chile）奇迹”的增长与社会成本应如何分开测量？
+- “智利奇迹”的增长与社会成本应如何分开测量？
 - 为什么民主化并未终结社会保障与宪法合法性的争论？
 
 ## 十、参考文献 / Referencias
@@ -107,8 +107,8 @@
 2. Peter Winn 编，Victims of the Chilean Miracle，Duke University Press，2004（书目条目；暂不提供未经核实的直达链接）
 3. Steve J. Stern，Remembering Pinochet’s Chile，Duke University Press，2004（书目条目；暂不提供未经核实的直达链接）
 4. Museo de la Memoria y los Derechos Humanos，馆藏与教育资料 — https://mmdh.cl/
-5. 智利（Chile）法律原文节录出处：智利（Chile）1980年宪法（修订本），第1条（节录，非2022/2023未通过草案） — https://constituteproject.org/constitution/Chile_2021?lang=es
+5. 智利法律原文节录出处：智利1980年宪法（修订本），第1条（节录，非2022/2023未通过草案） — https://constituteproject.org/constitution/Chile_2021?lang=es
 6. 联合国拉美和加勒比经济委员会（ECLAC），CEPALSTAT——分国社会、经济与环境指标 — https://statistics.cepal.org/portal/cepalstat/?lang=en
 7. 世界银行，World Development Indicators（WDI），country profiles — https://data.worldbank.org/country/latin-america-and-caribbean
 8. Zachary Elkins、Tom Ginsburg、James Melton 编，Constitute Project——宪法历次版本对照 — https://www.constituteproject.org/countries
-9. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国（United States）拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
+9. Ramón A. Gutiérrez、Tomás Almaguer 编，The New Latino Studies Reader: A Twenty-First-Century Perspective，University of California Press，2016（美国拉丁裔研究；第5—6章可用于移民比较，不可替代本国研究） — https://www.ucpress.edu/
