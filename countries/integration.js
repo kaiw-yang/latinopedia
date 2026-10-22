@@ -1,6 +1,6 @@
 /* Latinopedia country dossier integration, additive only; loaded after existing inline app script. */
 (function(){
- const supported = new Set(['br','mx','ar','cl','co','pe','bo','ve','ec','py','uy','gt','sv','hn','ni','cr','pa','cu','do','ht']);
+ const supported = new Set(['br','mx','ar','cl','co','pe','bo','ve','ec','py','uy','gt','sv','hn','ni','cr','pa','cu','do','ht','gy','sr']);
  function addDossierLink(){
    try {
      const id=(typeof state!== 'undefined' && state.country) || '';

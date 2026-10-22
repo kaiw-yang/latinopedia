@@ -27,5 +27,5 @@ for (const q of bank) for (const text of [q.q,...q.opts,q.why]) {
  assert.equal(annotate(once,q.country),once, q.id);
  assert(!/巴西（Brasil）利亚|海地（Haïti）区/.test(once),q.id);
 }
-assert.equal(bank.length,420);
-console.log('Passed name disambiguation, duplicate prevention, and all 420 questions.');
+assert.equal(bank.length,460);
+console.log('Passed name disambiguation, duplicate prevention, and all 460 questions.');
