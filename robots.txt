@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaiw-yang.github.io/latinopedia/sitemap.xml
